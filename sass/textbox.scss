@@ -1,0 +1,36 @@
+@import "../bourbon/bourbon";
+@import "compass/css3/transition";
+@import "compass/typography/vertical_rhythm";
+
+.armor-tapstrap .textbox,
+.armor-tapstrap-textbox {
+  @include adjust-font-size-to(14px);
+  @include transition(all .2s);
+  background-color: #dedede;
+  color: #999;
+  cursor: text;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  padding: rhythm(1/2, 14px);
+  vertical-align: middle;
+  &:hover,
+  &:focus {
+    background-color: #008bcc;
+    color: #fff;
+    @include placeholder {
+      color: darken(#fff, 15%);
+    }
+  }
+}
+
+.armor-tapstrap .textbox-size-large,
+.armor-tapstrap-textbox-size-large {
+  @include adjust-font-size-to(36px);
+  padding: rhythm(1/2, 36px);
+}
+
+.armor-tapstrap .textbox-dark,
+.armor-tapstrap-textbox-dark {
+  background-color: #575757;
+  color: #ccc;
+}

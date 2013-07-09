@@ -1,0 +1,46 @@
+@import "compass/typography/vertical_rhythm";
+
+.armor-tapstrap .button-group,
+.armor-tapstrap-button-group {
+  display: inline-block;
+  margin-right: -1px;
+  min-width: 1px;
+}
+
+.armor-tapstrap .button-group > .button,
+.armor-tapstrap-button-group > .armor-tapstrap-button {
+  float: left;
+  margin-right: 1px;
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    left: -1px;
+    position: absolute;
+    width: 1px;
+  }
+  &::before {
+    background-color: #404040;
+    bottom: 0;
+    top: 0;
+  }
+  &::after {
+    background-color: #ccc;
+    height: 12px;
+    top: .5 * rhythm(lines-for-font-size(14px) + 1, 14px, 12px);
+  }
+  &:first-child {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+  &:hover {
+    & + .button::after,
+    & + .armor-tapstrap-button::after,
+    &::after {
+      background-color: #404040;
+    }
+  }
+}

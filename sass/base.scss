@@ -1,0 +1,4 @@
+@import "compass/typography/vertical_rhythm";
+$base-font-size: 16px;
+$base-line-height: 20px;
+@include establish-baseline;

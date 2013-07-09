@@ -1,0 +1,16 @@
+@import "compass/typography/vertical_rhythm";
+
+.armor-tapstrap .logo,
+.armor-tapstrap-logo {
+  background-image: inline-image("logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  display: inline-block;
+  font-size: 0/0 a;
+  height: rhythm(lines-for-font-size(26px));
+  width: 124px;
+  &[href] {
+    cursor: pointer;
+  }
+}

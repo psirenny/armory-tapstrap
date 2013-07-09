@@ -1,0 +1,22 @@
+@import "compass/typography/vertical_rhythm";
+
+@each $dir in top, right, bottom, left {
+  @each $size in (xx-small 1px) (x-small $base-font-size/4) (small $base-font-size/2) (medium $base-font-size) (large 3*$base-font-size/2) (x-large 11*$base-font-size/4) (xx-large 4*$base-font-size) {
+    .armor-tapstrap .space-#{$dir}-#{nth($size, 1)},
+    .armor-tapstrap-space-#{$dir}-#{nth($size, 1)} {
+      margin-#{$dir}: nth($size, 2);
+    }
+
+    .armor-tapstrap .hold-space-#{$dir}-#{nth($size, 1)},
+    .armor-tapstrap-hold-space-#{$dir}-#{nth($size, 1)} {
+      margin-#{$dir}: -1 * nth($size, 2);
+      @if $dir == top {
+        min-height: nth($size, 2);
+      } @else if $dir == bottom {
+        min-height: nth($size, 2);
+      } @else {
+        min-width: nth($size, 2);
+      }
+    }
+  }
+}

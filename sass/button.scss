@@ -1,0 +1,36 @@
+@import "compass/css3/transition";
+@import "compass/typography/vertical_rhythm";
+
+.armor-tapstrap .button,
+.armor-tapstrap-button {
+  @include adjust-font-size-to(14px);
+  @include transition(all .2s);
+  background-color: #404040;
+  color: #ccc;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  height: rhythm(lines-for-font-size(14px) + 1, 14px);
+  line-height: rhythm(lines-for-font-size(14px) + 1, 14px);
+  min-width: rhythm(lines-for-font-size(14px) + 1, 14px);
+  padding-left: rhythm(lines-for-font-size(14px) + 1, 14px) / 4;
+  padding-right: rhythm(lines-for-font-size(14px) + 1, 14px) / 4;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  &:hover {
+    background-color: #008bcc;
+    color: #fff;
+  }
+  &:disabled {
+    background-color: lighten(#999, 10%);
+    cursor: default;
+  }
+}
+
+.armor-tapstrap .button-icon,
+.armor-tapstrap-button-icon {
+  line-height: inherit;
+  font-size: ($base-font-size / 14px) * 1em;
+}

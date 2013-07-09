@@ -1,0 +1,24 @@
+@import "compass/utilities/general/clearfix";
+
+.armor-tapstrap .form,
+.armor-tapstrap-form {
+  display: block;
+}
+
+.armor-tapstrap .form-controls,
+.armor-tapstrap-form-controls {
+  display: block;
+}
+
+.armor-tapstrap .form-control-items,
+.armor-tapstrap-form-control-items {
+  display: block;
+  margin-bottom: rhythm(-1);
+  min-height: rhythm(1);
+}
+
+.armor-tapstrap .form-control-item,
+.armor-tapstrap-form-control-item {
+  display: block;
+  margin-bottom: rhythm(1);
+}

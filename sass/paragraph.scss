@@ -1,0 +1,32 @@
+@import "compass/typography/vertical_rhythm";
+
+.armor-tapstrap .paragraph,
+.armor-tapstrap-paragraph {
+  @include adjust-font-size-to($base-font-size);
+  color: #999;
+  cursor: text;
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+@each $size in (xx-small .6875 * $base-font-size) (x-small .75 * $base-font-size) (small .875 * $base-font-size) (medium $base-font-size) (large 1.125 * $base-font-size) (x-large 1.25 * $base-font-size) (xx-large 1.375 * $base-font-size) {
+  .armor-tapstrap .paragraph-size-#{nth($size, 1)},
+  .armor-tapstrap-paragraph-size-#{nth($size, 1)} {
+    @include adjust-font-size-to(nth($size, 2));
+  }
+}
+
+.armor-tapstrap .paragraph-color-dark,
+.armor-tapstrap-paragraph-color-dark {
+  color: #666;
+}
+
+.armor-tapstrap .paragraph-color-light,
+.armor-tapstrap-paragraph-color-light {
+  color: #ccc;
+}
+
+.armor-tapstrap .paragraph-inverted,
+.armor-tapstrap-paragraph-inverted {
+  color: #fff;
+}

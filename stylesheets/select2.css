@@ -1,0 +1,263 @@
+/* line 8, ../sass/select2.scss */
+.armor-tapstrap .select2-container,
+.armor-tapstrap-select2-container {
+  -webkit-transition: all 0.2s false;
+  -moz-transition: all 0.2s false false;
+  -o-transition: all 0.2s false false;
+  transition: all 0.2s;
+  background-color: #575757;
+  cursor: text;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* line 20, ../sass/select2.scss */
+.armor-tapstrap .select2-container:hover,
+.armor-tapstrap-select2-container:hover,
+.armor-tapstrap .select2-container-active,
+.armor-tapstrap-select2-container-active {
+  background-color: #404040;
+}
+
+/* line 27, ../sass/select2.scss */
+.armor-tapstrap .select2-choice,
+.armor-tapstrap-select2-choice,
+.armor-tapstrap .select2-choices,
+.armor-tapstrap-select2-choices {
+  font-size: 1em;
+  line-height: 1.5em;
+  *zoom: 1;
+  -webkit-transition: all 0.2s false;
+  -moz-transition: all 0.2s false false;
+  -o-transition: all 0.2s false false;
+  transition: all 0.2s;
+  display: block;
+  padding: 0.75em;
+  width: 100%;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.armor-tapstrap .select2-choice:after,
+.armor-tapstrap-select2-choice:after,
+.armor-tapstrap .select2-choices:after,
+.armor-tapstrap-select2-choices:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 39, ../sass/select2.scss */
+.armor-tapstrap .select2-container-active .select2-choice,
+.armor-tapstrap-select2-container-active-choice,
+.armor-tapstrap .select2-container-active .select2-choices,
+.armor-tapstrap-select2-container-active-choices {
+  border-color: #3fb8ff;
+}
+
+/* line 46, ../sass/select2.scss */
+.armor-tapstrap .select2-search-choice,
+.armor-tapstrap-select2-search-choice,
+.armor-tapstrap .select2-search-field,
+.armor-tapstrap-select2-search-field {
+  color: #333;
+  display: block;
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+/* line 55, ../sass/select2.scss */
+.armor-tapstrap .select2-search-choice,
+.armor-tapstrap-select2-search-choice {
+  background-color: #e6e6e6;
+  background-image: linear, bottom, rgba(255, 255, 255, 0.18) 0, rgba(255, 255, 255, 0) 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .2rem;
+  color: #fff;
+  display: inline-block;
+  line-height: 0;
+  margin-bottom: 0.375em;
+  margin-top: 0.375em;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  position: relative;
+}
+
+/* line 71, ../sass/select2.scss */
+.armor-tapstrap .select2-search-choice-focus,
+.armor-tapstrap-select2-search-choice-focus {
+  background-color: #ccc;
+}
+
+/* line 75, ../sass/select2.scss */
+.select2-search-choice > div {
+  color: #333;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+/* line 82, ../sass/select2.scss */
+.armor-tapstrap .select2-search-choice-close,
+.armor-tapstrap-select2-search-choice-close {
+  display: none;
+}
+
+/* line 87, ../sass/select2.scss */
+.armor-tapstrap .select2-search-field,
+.armor-tapstrap-select2-search-field {
+  white-space: nowrap;
+}
+
+/* line 92, ../sass/select2.scss */
+.armor-tapstrap .select2-input,
+.armor-tapstrap-select2-input {
+  cursor: text;
+  display: block;
+}
+
+/* line 98, ../sass/select2.scss */
+.armor-tapstrap .select2-drop,
+.armor-tapstrap-select2-drop {
+  display: block;
+  position: absolute;
+  top: 100%;
+  z-index: 9999;
+  width: 100%;
+}
+
+/* line 106, ../sass/select2.scss */
+.armor-tapstrap .select2-drop .select2-search {
+  display: block;
+  margin-top: -3em;
+}
+
+/* line 111, ../sass/select2.scss */
+.armor-tapstrap .select2-drop .select2-search input {
+  font-size: 1em;
+  line-height: 1.5em;
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  cursor: text;
+  display: block;
+  font-family: Arial, sans-serif;
+  padding: 0.75em;
+  position: relative;
+  width: 100%;
+}
+
+/* line 125, ../sass/select2.scss */
+.armor-tapstrap .select2-results,
+.armor-tapstrap-select2-results {
+  background-color: #404040;
+  display: block;
+  max-height: 22.5em;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 134, ../sass/select2.scss */
+.armor-tapstrap .select2-result,
+.armor-tapstrap-select2-result {
+  display: block;
+}
+
+/* line 139, ../sass/select2.scss */
+.armor-tapstrap .select2-searching,
+.armor-tapstrap-select2-searching {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  color: #ccc;
+  display: inline-block;
+  font-family: FontAwesome;
+  padding: 0.75em;
+}
+/* line 145, ../sass/select2.scss */
+.armor-tapstrap .select2-searching::before,
+.armor-tapstrap-select2-searching::before {
+  content: '\f110';
+}
+
+/* line 151, ../sass/select2.scss */
+.armor-tapstrap .select2-result-label,
+.armor-tapstrap-select2-result-label {
+  background-image: linear, top, #575757, #575757;
+  background-color: #404040;
+  background-repeat: no-repeat;
+  background-size: .25rem 100%;
+  cursor: pointer;
+  display: block;
+  padding: 0.75em;
+}
+
+/* line 162, ../sass/select2.scss */
+.armor-tapstrap .select2-highlighted .select2-result-label,
+.armor-tapstrap-select2-highlighted-result-label {
+  background-image: linear, top, #0089cc, #0089cc;
+}
+
+/* line 167, ../sass/select2.scss */
+.armor-tapstrap .select2-disabled .select2-result-label,
+.armor-tapstrap-select2-disabled-result-label {
+  background-color: #fafafa;
+  color: #ccc;
+  cursor: default;
+}
+/* line 171, ../sass/select2.scss */
+.armor-tapstrap .select2-disabled .select2-result-label *,
+.armor-tapstrap-select2-disabled-result-label * {
+  cursor: default !important;
+}
+
+/* line 177, ../sass/select2.scss */
+.armor-tapstrap .select2-default,
+.armor-tapstrap-select2-default {
+  display: block;
+}
+/* line 179, ../sass/select2.scss */
+.armor-tapstrap .select2-default > span,
+.armor-tapstrap-select2-default > span {
+  color: #ccc;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+/* line 188, ../sass/select2.scss */
+.armor-tapstrap .select2-dropdown-open .select2-default > span,
+.armor-tapstrap .select2-dropdown-oepn .armor-tapstrap-select2-default > span {
+  color: transparent;
+}
+
+/* line 194, ../sass/select2.scss */
+.armor-tapstrap .select2-display-none,
+.armor-tapstrap-select2-display-none {
+  display: none;
+}
+
+/* line 199, ../sass/select2.scss */
+.armor-tapstrap .select2-addon,
+.armor-tapstrap-select2-addon {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  background-color: #404040;
+  color: #ccc;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  height: 3.42857em;
+  line-height: 3.42857em;
+  min-width: 3.42857em;
+  padding-left: 0.85714em;
+  padding-right: 0.85714em;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* line 216, ../sass/select2.scss */
+.armor-tapstrap .select2-addon-icon,
+.armor-tapstrap-select2-addon-icon {
+  font-size: 1.14286em;
+  line-height: 1.5em;
+  line-height: inherit;
+}

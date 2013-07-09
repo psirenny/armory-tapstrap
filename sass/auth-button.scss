@@ -1,0 +1,52 @@
+@import "compass/css3/transition";
+@import "compass/typography/vertical_rhythm";
+
+@each $provider in (facebook #395692) (google #ca3f2f) (twitter #00a4e6) {
+  .armor-tapstrap .auth-button-provider-#{nth($provider, 1)},
+  .armor-tapstrap-auth-button-provider-#{nth($provider, 1)} {
+    background-color: nth($provider, 2);
+    &:hover {
+      background-color: lighten(nth($provider, 2), 15%);
+    }
+  }
+}
+
+.armor-tapstrap .auth-button,
+.armor-tapstrap-auth-button {
+  @include adjust-font-size-to(14px);
+  @include transition(all .2s);
+  border-color: #fff;
+  box-shadow: 0 0 0 1px rgba(#fff, .4) inset;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: rhythm(.5, 14px) rhythm(2, 14px);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  &:disabled {
+    background-color: lighten(#999, 10%);
+    cursor: default;
+  }
+}
+
+.armor-tapstrap .auth-button-icon,
+.armor-tapstrap-auth-button-icon {
+  bottom: rhythm(2, 28px, 29px) / 2;
+  font-size: 2em;
+  left: rhythm(2, 28px, 29px);
+  position: absolute;
+}
+
+.armor-tapstrap .auth-button-provider-google > .auth-button-icon,
+.armor-tapstrap-auth-button-provider-google > .armor-tapstrap-auth-button-icon {
+  bottom: -.5 * rhythm(2, 28px, 29px) / 2;
+  font-size: 2.5em;
+  left: -.5 * rhythm(2, 28px, 29px);
+}
+
+.armor-tapstrap .auth-button-text,
+.armor-tapstrap-auth-button-text {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}

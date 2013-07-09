@@ -1,0 +1,34 @@
+@import "compass/typography/vertical_rhythm";
+
+.armor-tapstrap .navigation-bar,
+.armor-tapstrap-navigation-bar {
+  background-color: #000;
+  display: block;
+  min-height: rhythm(2);
+}
+
+.armor-tapstrap .navigation-bar-items,
+.armor-tapstrap-navigation-bar-items,
+.armor-tapstrap .navigation-bar-items-alternate,
+.armor-tapstrap-navigation-bar-items-alternate {
+  display: block;
+}
+
+.armor-tapstrap .navigation-bar-items,
+.armor-tapstrap-navigation-bar-items {
+  float: left;
+}
+
+.armor-tapstrap .navigation-bar-items-alternate,
+.armor-tapstrap-navigation-bar-items-alternate {
+  float: right;
+}
+
+.armor-tapstrap .navigation-bar-item,
+.armor-tapstrap-navigation-bar-item {
+  display: inline-block;
+  vertical-align: top;
+  & > * {
+    vertical-align: top;
+  }
+}

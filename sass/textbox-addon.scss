@@ -1,0 +1,34 @@
+@import "compass/typography/vertical_rhythm";
+
+.armor-tapstrap .textbox + .textbox-addon,
+.armor-tapstrap-textbox + .armor-tapstrap-textbox-addon {
+  margin-left: -4px;
+}
+
+.armor-tapstrap .textbox-addon + .textbox,
+.armor-tapstrap-textbox-addon + .armor-tapstrap-textbox {
+  margin-left: -4px;
+}
+
+.armor-tapstrap .textbox-addon,
+.armor-tapstrap-textbox-addon {
+  @include adjust-font-size-to(14px);
+  background-color: #008bcc;
+  color: #fff;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  height: rhythm(lines-for-font-size(14px) + 1, 14px);
+  line-height: rhythm(lines-for-font-size(14px) + 1, 14px);
+  min-width: rhythm(lines-for-font-size(14px) + 1, 14px);
+  padding-left: rhythm(lines-for-font-size(14px) + 1, 14px) / 4;
+  padding-right: rhythm(lines-for-font-size(14px) + 1, 14px) / 4;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.armor-tapstrap .textbox-addon-icon,
+.armor-tapstrap-textbox-addon-icon {
+  @include adjust-font-size-to(16px, 1, 14px);
+  line-height: inherit;
+}

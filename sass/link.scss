@@ -1,0 +1,25 @@
+@import "compass/css3/transition";
+
+.armor-tapstrap .link,
+.armor-tapstrap-link {
+  @include transition(all .2s);
+  color: #ccc;
+  display: inline;
+  &[href] {
+    color: #008bcc;
+    cursor: pointer;
+    &:hover {
+      color: lighten(#008bcc, 20%);
+    }
+  }
+}
+
+.armor-tapstrap .link-callout,
+.armor-tapstrap-link-callout {
+  &[href] {
+    color: #ff3300;
+    &:hover {
+      color: lighten(#ff3300, 20%);
+    }
+  }
+}

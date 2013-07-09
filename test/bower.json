@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "font-awesome": "*",
+    "jquery": "*",
+    "lodash": "*",
+    "select2": "*"
+  },
+  "name": "tapstrap-test",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

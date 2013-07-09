@@ -1,0 +1,20 @@
+@import "compass/utilities/general/clearfix";
+
+.armor-tapstrap .media,
+.armor-tapstrap-media {
+  @include pie-clearfix;
+  display: block;
+}
+
+.armor-tapstrap .media-image,
+.armor-tapstrap-media-image {
+  display: block;
+  float: left;
+  margin-right: 1rem;
+}
+
+.armor-tapstrap .media-body,
+.armor-tapstrap-media-body {
+  display: table-cell;
+  width: 10000px;
+}
