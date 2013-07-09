@@ -2,7 +2,7 @@
   "dependencies": {
     "annihilate.css": "*"
   },
-  "name": "tapstrap",
+  "name": "armory-tapstrap",
   "version": "0.0.0",
   "ignore": [
     "**/.*",

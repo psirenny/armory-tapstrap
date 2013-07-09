@@ -1,0 +1,16 @@
+/* line 3, ../sass/line.scss */
+.line-clamp {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 9, ../sass/line.scss */
+.line-clamp-text {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: table-cell;
+}

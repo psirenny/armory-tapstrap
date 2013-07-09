@@ -5,7 +5,7 @@
     "lodash": "*",
     "select2": "*"
   },
-  "name": "tapstrap-test",
+  "name": "armory-tapstrap-test",
   "version": "0.0.0",
   "ignore": [
     "**/.*",

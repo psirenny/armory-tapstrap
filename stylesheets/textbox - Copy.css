@@ -1,0 +1,88 @@
+/* line 6, ../sass/textbox - Copy.scss */
+.armor-tapstrap .textbox,
+.armor-tapstrap-textbox {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  -webkit-transition: all 0.2s false;
+  -moz-transition: all 0.2s false false;
+  -o-transition: all 0.2s false false;
+  transition: all 0.2s;
+  background-color: #dedede;
+  color: #999;
+  cursor: text;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  padding: 0.85714em;
+  vertical-align: middle;
+}
+/* line 17, ../sass/textbox - Copy.scss */
+.armor-tapstrap .textbox:hover, .armor-tapstrap .textbox:focus,
+.armor-tapstrap-textbox:hover,
+.armor-tapstrap-textbox:focus {
+  background-color: #b8b8b8;
+  color: #737373;
+}
+/* line 8, ../bourbon/css3/_placeholder.scss */
+.armor-tapstrap .textbox:hover::-webkit-input-placeholder, .armor-tapstrap .textbox:focus::-webkit-input-placeholder,
+.armor-tapstrap-textbox:hover::-webkit-input-placeholder,
+.armor-tapstrap-textbox:focus::-webkit-input-placeholder {
+  color: #737373;
+}
+/* line 14, ../bourbon/css3/_placeholder.scss */
+.armor-tapstrap .textbox:hover:-moz-placeholder, .armor-tapstrap .textbox:focus:-moz-placeholder,
+.armor-tapstrap-textbox:hover:-moz-placeholder,
+.armor-tapstrap-textbox:focus:-moz-placeholder {
+  color: #737373;
+}
+/* line 19, ../bourbon/css3/_placeholder.scss */
+.armor-tapstrap .textbox:hover::-moz-placeholder, .armor-tapstrap .textbox:focus::-moz-placeholder,
+.armor-tapstrap-textbox:hover::-moz-placeholder,
+.armor-tapstrap-textbox:focus::-moz-placeholder {
+  color: #737373;
+}
+/* line 24, ../bourbon/css3/_placeholder.scss */
+.armor-tapstrap .textbox:hover:-ms-input-placeholder, .armor-tapstrap .textbox:focus:-ms-input-placeholder,
+.armor-tapstrap-textbox:hover:-ms-input-placeholder,
+.armor-tapstrap-textbox:focus:-ms-input-placeholder {
+  color: #737373;
+}
+
+/* line 27, ../sass/textbox - Copy.scss */
+.armor-tapstrap .textbox-addon,
+.armor-tapstrap-textbox-addon {
+  font-size: 1.5em;
+  line-height: 2em;
+  background-color: #b8b8b8;
+  color: #737373;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  height: 2em;
+  line-height: 2em;
+  min-width: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* line 44, ../sass/textbox - Copy.scss */
+.armor-tapstrap .textbox-addon-icon,
+.armor-tapstrap-textbox-addon-icon {
+  line-height: inherit;
+}
+
+/* line 49, ../sass/textbox - Copy.scss */
+.armor-tapstrap .textbox-size-large,
+.armor-tapstrap-textbox-size-large {
+  font-size: 2.25em;
+  line-height: 1.33333em;
+  padding: 0.33333em;
+}
+
+/* line 55, ../sass/textbox - Copy.scss */
+.armor-tapstrap .textbox-dark,
+.armor-tapstrap-textbox-dark {
+  background-color: #575757;
+  color: #ccc;
+}

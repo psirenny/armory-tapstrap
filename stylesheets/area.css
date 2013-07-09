@@ -1,0 +1,9 @@
+/* line 1, ../sass/area.scss */
+.background {
+  background-color: #f0f0f0;
+}
+
+/* line 5, ../sass/area.scss */
+.background-inverted {
+  background-color: #000;
+}
