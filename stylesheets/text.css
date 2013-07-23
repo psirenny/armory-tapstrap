@@ -1,0 +1,77 @@
+/* line 4, ../sass/text.scss */
+.armor-tapstrap .text,
+.armor-tapstrap-text {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #999;
+  cursor: text;
+  display: inline;
+  font-family: Arial, sans-serif;
+}
+
+/* line 14, ../sass/text.scss */
+.armor-tapstrap .text-size-xx-small,
+.armor-tapstrap-text-size-xx-small {
+  font-size: 0.6875em;
+  line-height: 2.18182em;
+}
+
+/* line 14, ../sass/text.scss */
+.armor-tapstrap .text-size-x-small,
+.armor-tapstrap-text-size-x-small {
+  font-size: 0.75em;
+  line-height: 2em;
+}
+
+/* line 14, ../sass/text.scss */
+.armor-tapstrap .text-size-small,
+.armor-tapstrap-text-size-small {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+/* line 14, ../sass/text.scss */
+.armor-tapstrap .text-size-medium,
+.armor-tapstrap-text-size-medium {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 14, ../sass/text.scss */
+.armor-tapstrap .text-size-large,
+.armor-tapstrap-text-size-large {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+}
+
+/* line 14, ../sass/text.scss */
+.armor-tapstrap .text-size-x-large,
+.armor-tapstrap-text-size-x-large {
+  font-size: 1.25em;
+  line-height: 1.2em;
+}
+
+/* line 14, ../sass/text.scss */
+.armor-tapstrap .text-size-xx-large,
+.armor-tapstrap-text-size-xx-large {
+  font-size: 1.375em;
+  line-height: 2.18182em;
+}
+
+/* line 20, ../sass/text.scss */
+.armor-tapstrap .text-color-dark,
+.armor-tapstrap-text-color-dark {
+  color: #666;
+}
+
+/* line 25, ../sass/text.scss */
+.armor-tapstrap .text-color-light,
+.armor-tapstrap-text-color-light {
+  color: #ccc;
+}
+
+/* line 30, ../sass/text.scss */
+.armor-tapstrap .text-inverted,
+.armor-tapstrap-text-inverted {
+  color: #fff;
+}

@@ -1,0 +1,11 @@
+/* line 5, ../sass/off-canvas-column.scss */
+.armor-tapstrap .off-canvas-column,
+.armor-tapstrap-off-canvas-column {
+  display: block;
+  height: 100%;
+  right: 0;
+  padding-left: 1%;
+  padding-right: 1%;
+  position: fixed;
+  width: 30%;
+}

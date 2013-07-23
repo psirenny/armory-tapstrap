@@ -1,0 +1,38 @@
+/* line 4, ../sass/textbox-addon.scss */
+.armor-tapstrap .textbox + .textbox-addon,
+.armor-tapstrap-textbox + .armor-tapstrap-textbox-addon {
+  margin-left: -4px;
+}
+
+/* line 9, ../sass/textbox-addon.scss */
+.armor-tapstrap .textbox-addon + .textbox,
+.armor-tapstrap-textbox-addon + .armor-tapstrap-textbox {
+  margin-left: -4px;
+}
+
+/* line 14, ../sass/textbox-addon.scss */
+.armor-tapstrap .textbox-addon,
+.armor-tapstrap-textbox-addon {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  background-color: #008bcc;
+  color: #fff;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  height: 3.42857em;
+  line-height: 3.42857em;
+  min-width: 3.42857em;
+  padding-left: 0.85714em;
+  padding-right: 0.85714em;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* line 31, ../sass/textbox-addon.scss */
+.armor-tapstrap .textbox-addon-icon,
+.armor-tapstrap-textbox-addon-icon {
+  font-size: 1.14286em;
+  line-height: 1.5em;
+  line-height: inherit;
+}
