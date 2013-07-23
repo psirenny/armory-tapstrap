@@ -1,2 +1,0 @@
-language: node_js
-script: gem install sass; gem install compass; compass compile
