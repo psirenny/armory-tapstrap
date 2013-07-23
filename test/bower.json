@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "annihilate.css"
     "font-awesome": "*",
     "jquery": "*",
     "lodash": "*",
