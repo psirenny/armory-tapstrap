@@ -1,2 +1,2 @@
 language: node_js
-script: sass --help; compass compile
+script: gem install sass; gem install compass; compass compile
