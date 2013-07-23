@@ -1,11 +1,1 @@
-/* line 2, ../sass/background.scss */
-.armor-tapstrap .background,
-.armor-tapstrap-background {
-  background-color: #f0f0f0;
-}
-
-/* line 7, ../sass/background.scss */
-.armor-tapstrap .background-inverted,
-.armor-tapstrap-background-inverted {
-  background-color: #000;
-}
+.armor-tapstrap .background,.armor-tapstrap-background{background-color:#f0f0f0}.armor-tapstrap .background-inverted,.armor-tapstrap-background-inverted{background-color:#000}
