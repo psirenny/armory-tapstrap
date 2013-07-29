@@ -1,13 +1,14 @@
 {
+  "name": "test",
+  "version": "0.1.0",
   "dependencies": {
-    "annihilate.css"
-    "font-awesome": "*",
-    "jquery": "*",
-    "lodash": "*",
-    "select2": "*"
+    "annihilate.css": "*",
+    "font-awesome": "~3.2.1",
+    "jquery": "~2.0.3",
+    "lodash": "~1.3.1",
+    "select2": "~3.4.0",
+    "spice.css": "*"
   },
-  "name": "armory-tapstrap-test",
-  "version": "0.0.0",
   "ignore": [
     "**/.*",
     "node_modules",

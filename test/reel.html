@@ -1,492 +1,466 @@
 <html class="armor-tapstrap">
   <meta charset="utf-8">
   <link href="components/annihilate.css/index.css" rel="stylesheet">
+  <link href="components/spice.css/index.css" rel="stylesheet">
   <link href="components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="../stylesheets/index.css" rel="stylesheet">
   <script src="components/jquery/jquery.min.js"></script>
   <script src="components/select2/select2.min.js"></script>
   <script src="components/lodash/dist/lodash.min.js"></script>
-  <script>
-    $(function () {
-      $('#search').select2({
-        formatInputTooShort: null,
-        formatNoMatches: null,
-        formatResult: function (reel) {
-          var html = '<div class="media">';
-          html += '<div class="media-image">';
-          html += '<a class="userphoto userphoto-size-small" href=""></a>';
-          html += '</div>';
-          html += '<div class="media-body">';
-          html += '<p class="paragraph paragraph-color-light line-clamp">';
-          html += '<span class="line-clamp-text">';
-          html += reel.text;
-          html += '</span>';
-          html += '</p>';
-          return html;
-        },
-        formatSearching: _.partial(_.identity, ''),
-        minimumInputLength: 1,
-        query: function (query) {
-          var data = {results: []}, i, j, s;
-          for (i = 1; i < 5; i++) {
-            s = "";
-
-            for (j = 0; j < i; j++) {
-              s = s + query.term;
-            }
-
-            data.results.push({id: query.term + i, text: s});
-          }
-
-          setTimeout(function () {
-            query.callback(data)
-          }, 300);
-        }
-      });
-    });
-  </script>
   <body class="background background-inverted">
-    <header class="navigation-bar" style="display:none;">
-      <ul class="navigation-bar-items">
-        <li class="navigation-bar-item space-right-x-large">
-          <a class="logo logo-clickable">Tap Reel</a>
-        </li>
-      </ul>
-      <ul class="navigation-bar-items-alternate">
-        <li class="navigation-bar-item">
-          <div class="button-group">
-            <button class="button">
-              <i class="button-icon icon-backward"></i>
-            </button>
-            <button class="button">
-              <a class="button-icon icon-play"></a>
-            </button>
-            <button class="button">
-              <a class="button-icon icon-forward"></a>
-            </button>
-          </div>
-        </li>
-      </ul>
+    <header class="navigation-bar layout-container">
+      <div class="navigation-bar-sections">
+        <ul class="navigation-bar-section-items">
+          <li class="navigation-bar-section-item space-right-x-large">
+            <a class="logo logo-clickable">Tap Reel</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navigation-bar-sections">
+        <ul class="navigation-bar-section-items">
+          <li class="navigation-bar-section-item">
+            <div class="button-group">
+              <button class="button">
+                <i class="button-icon icon-backward"></i>
+              </button>
+              <button class="button">
+                <a class="button-icon icon-play"></a>
+              </button>
+              <button class="button">
+                <a class="button-icon icon-forward"></a>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
     </header>
     <div class="layout-container">
-      <section class="off-canvas-column background">
-        <div class="button-group">
-          <button class="button">
-            <i class="button-icon icon-comment"></i>
-          </button>
-        </div>
-        <form class="form">
-          <div class="form-controls">
-            <ul class="form-control-items">
-              <li class="form-control-item">
-                <input class="textbox" placeholder="Leave a comment…" type="text">
-              </li>
-              <li class="form-control-item">
-                <input class="button" type="submit" value="Post">
-              </li>
-            </ul>
+      <section id="comments" class="off-canvas-column background">
+        <div class="sticky">
+          <div class="sticky-item">
+            <div class="off-canvas-column-toggle">
+              <a class="button active" href="#">
+                <i class="button-icon icon-comment"></i>
+              </a>
+            </div>
           </div>
-        </form>
-        <div class="scrollable-window space-top-medium" style="height:500px;">
-          <div class="stack">
-            <ul class="stack-items hold-space-top-medium">
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href="#"></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href="#"></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-              <li class="stack-item space-top-medium">
-                <blockquote class="media">
-                  <div class="media-image">
-                    <a class="userphoto userphoto-size-small" href=""></a>
-                  </div>
-                  <div class="media-body">
-                    <p class="paragraph">
-                      <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
-                    </p>
-                  </div>
-                </blockquote>
-              </li>
-            </ul>
+          <div class="sticky-item">
+            <form class="form space-bottom-large space-top-large">
+              <div class="form-controls">
+                <ul class="form-control-items">
+                  <li class="form-control-item">
+                    <input class="textbox" placeholder="Leave a comment…" type="text" style="width:100%;">
+                  </li>
+                  <li class="form-control-item">
+                    <input class="button" type="submit" value="post">
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+          <div class="sticky-content">
+            <div class="scrollable-window expand-y">
+              <div class="stack">
+                <ul class="stack-items hold-space-top-medium">
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame. You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href="#"></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href="#"></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                  <li class="stack-item space-top-medium">
+                    <blockquote class="media">
+                      <div class="media-image">
+                        <a class="userphoto userphoto-size-small" href=""></a>
+                      </div>
+                      <div class="media-body">
+                        <p class="paragraph">
+                          <a class="link" href="#">rigby13</a> You guys are out of your minds. Courage is totally lame*.
+                        </p>
+                      </div>
+                    </blockquote>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,11 @@
 {
   "dependencies": {
-    "annihilate.css": "*"
+    "annihilate.css": "*",
+    "font-awesome": "*",
+    "jquery": "*",
+    "lodash": "*",
+    "select2": "*",
+    "spice.css": "*"
   },
   "name": "armory-tapstrap",
   "version": "0.0.0",

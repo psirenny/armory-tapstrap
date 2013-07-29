@@ -19,6 +19,7 @@
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
+  &.active,
   &:hover {
     background-color: #008bcc;
     color: #fff;

@@ -2,3 +2,8 @@
 $base-font-size: 16px;
 $base-line-height: 20px;
 @include establish-baseline;
+
+html,
+body {
+	height: 100%;
+}

@@ -2,6 +2,7 @@
 
 .armor-tapstrap .form,
 .armor-tapstrap-form {
+  @include pie-clearfix;
   display: block;
 }
 

@@ -9,8 +9,24 @@
   display: inline-block;
   font-size: 0/0 a;
   height: rhythm(lines-for-font-size(26px));
+  position: relative;
   width: 124px;
-  &[href] {
-    cursor: pointer;
+}
+
+.armor-tapstrap .logo-clickable,
+.armor-tapstrap-logo-clickable {
+  cursor: pointer;
+  &::after {
+    @include transition(all .2s);
+    background-color: rgba(#000, 0);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &:hover::after {
+    background-color: rgba(#000, 0.3);
   }
 }

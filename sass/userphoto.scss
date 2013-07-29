@@ -6,10 +6,16 @@
   background-size: cover;
   display: inline-block;
   font-size: 2 * $base-line-height;
-  height: rhythm(lines-for-font-size(2 * $base-line-height), 2*$base-line-height);
   line-height: rhythm(lines-for-font-size(2 * $base-line-height), 2*$base-line-height);
+  max-height: rhythm(lines-for-font-size(2 * $base-line-height), 2*$base-line-height);
   position: relative;
   width: rhythm(lines-for-font-size(2 * $base-line-height), 2*$base-line-height);
+  &::before,
+  &::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 100%;
+  }
   &::before {
     bottom: 0;
     background: #ccc;
@@ -23,31 +29,28 @@
     text-align: center;
     top: 0;
   }
-  &[href] {
+}
+
+.armor-tapstrap .userphoto-clickable,
+.armor-tapstrap-userphoto-clickable {
     cursor: pointer;
     &::after {
       @include transition(all .2s);
       background-color: #000;
-      bottom: 0;
-      content: '';
-      left: 0;
       opacity: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
+      position: relative;
     }
     &:hover::after {
       opacity: .2;
     }
-  }
 }
 
 @each $size in (small $base-line-height) (medium 2 * $base-line-height) (large 3 * $base-line-height) {
   .armor-tapstrap .userphoto-size-#{nth($size, 1)},
   .armor-tapstrap-userphoto-size-#{nth($size, 1)} {
     font-size: nth($size, 2);
-    height: rhythm(lines-for-font-size(nth($size, 2)), nth($size, 2));
     line-height: rhythm(lines-for-font-size(nth($size, 2)), nth($size, 2));
+    max-height: rhythm(lines-for-font-size(nth($size, 2)), nth($size, 2));
     width: rhythm(lines-for-font-size(nth($size, 2)), nth($size, 2));
   }
 }
