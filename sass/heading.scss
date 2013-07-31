@@ -2,9 +2,48 @@
 
 .armor-tapstrap .heading,
 .armor-tapstrap-heading {
-  @include adjust-font-size-to(36px);
+  @include adjust-font-size-to(2.25 * $base-font-size);
   color: #999;
   display: block;
   font-family: Arial, sans-serif;
   letter-spacing: -.05em;
+}
+
+.armor-tapstrap .heading-comment,
+.armor-tapstrap-heading-comment {
+  @include adjust-font-size-to(1.3125 * $base-font-size, $from-size:(2.25 * $base-font-size));
+	display: inline;
+}
+
+.armor-tapstrap .heading-inline,
+.armor-tapstrap-heading-inline {
+  display: inline-block;
+}
+
+.armor-tapstrap .heading-inverted,
+.armor-tapstrap-heading-inverted {
+  color: #fff;
+}
+
+.armor-tapstrap .heading-inverted > .heading-comment,
+.armor-tapstrap-heading-inverted > .armor-tapstrap-heading-comment,
+.armor-tapstrap .heading-comment-inverted,
+.armor-tapstrap-heading-comment-inverted {
+  color: #ccc;
+}
+
+@each $size in (xx-small 1) (x-small 2) (small 3) (medium 4) (large 5) (x-large 6) (xx-large 7) {
+  $base-size: $base-font-size * (nth($size, 2) + 2);
+
+  .armor-tapstrap .heading-size-#{nth($size, 1)},
+  .armor-tapstrap-heading-size-#{nth($size, 1)} {
+    @include adjust-font-size-to(.375 * $base-size);
+  }
+
+  .armor-tapstrap .heading-size-#{nth($size, 1)} > .heading-comment,
+  .armor-tapstrap-heading-size-#{nth($size, 1)} > .armor-tapstrap-heading-comment,
+  .armor-tapstrap .heading-comment-size-#{nth($size, 1)},
+  .armor-tapstrap-heading-comment-size-#{nth($size, 1)} {
+    @include adjust-font-size-to(.21875 * $base-size, $from-size:.375 * $base-size);
+  }
 }

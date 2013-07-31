@@ -2,7 +2,8 @@
 .armor-tapstrap-sticky {
 	display: table;
 	height: 100%;
-	width: 100%;
+  table-layout: fixed;
+  width: 100%;
 }
 
 .armor-tapstrap .sticky-item,

@@ -6,6 +6,7 @@
     "font-awesome": "*",
     "jquery": "*",
     "lodash": "*",
+    "masonry": "*",
     "select2": "*",
     "spice.css": "*"
   },

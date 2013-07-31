@@ -1,9 +1,11 @@
 <html class="armor-tapstrap">
   <meta charset="utf-8">
   <link href="components/annihilate.css/index.css" rel="stylesheet">
+  <link href="components/spice.css/index.css" rel="stylesheet">
   <link href="components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="../stylesheets/index.css" rel="stylesheet">
   <script src="components/jquery/jquery.min.js"></script>
+  <script src="components/masonry/masonry.pkgd.min.js"></script>
   <script src="components/select2/select2.min.js"></script>
   <script src="components/lodash/dist/lodash.min.js"></script>
   <script>
@@ -47,45 +49,43 @@
   </script>
   <body class="background">
     <header class="navigation-bar layout-container">
-      <ul class="navigation-bar-items">
-        <li class="navigation-bar-item space-right-x-large">
-          <a class="logo logo-clickable">Tap Reel</a>
-        </li>
-        <li class="navigation-bar-item">
-          <input id="search" placeholder="Search reels…" type="text" style="width:250px;"><!--
-          --><span class="select2-addon"><i class="select2-addon-icon icon-search"></i></button>
-        </li>
-      </ul>
-      <nav class="navigation-bar-items-alternate">
-        <div class="navigation-bar-item">
-          <div class="button-group">
-            <a class="button">
-              <i class="button-icon icon-signout"></i>
-            </a>
-            <div class="button dropout-context dropout-toggle-hover">
-              <i class="button-icon icon-reorder"></i>
-              <menu class="dropout-menu dropout-menu-align-right">
-                <ul class="dropout-menu-items">
-                  <li class="dropout-menu-item">
-                    <a class="dropout-menu-item-target"><i class="icon-info-sign"></i> About TapReel</i></a>
-                  </li>
-                  <li class="dropout-menu-item">
-                    <a class="dropout-menu-item-target"><i class="icon-legal"></i> Terms of Service</i></a>
-                  </li>
-                  <li class="dropout-menu-item">
-                    <a class="dropout-menu-item-target"><i class="icon-key"></i> Privacy Policy</i></a>
-                  </li>
-                </ul>
-              </menu>
+      <nav class="navigation-bar-sections">
+        <div class="navigation-bar-section-items">
+          <section class="navigation-bar-section-item">
+            <a class="logo logo-clickable space-right-xx-large">Tap Reel</a>
+            <input id="search" placeholder="Search reels…" type="text" style="width:250px;"><!--
+            --><span class="select2-addon"><i class="select2-addon-icon icon-search"></i></button>
+          </section>
+          <section class="navigation-bar-section-item">
+            <div class="button-group">
+              <a class="button">
+                <i class="button-icon icon-signout"></i>
+              </a>
+              <div class="button dropout-context dropout-toggle-hover">
+                <i class="button-icon icon-reorder"></i>
+                <menu class="dropout-menu dropout-menu-align-right">
+                  <ul class="dropout-menu-items">
+                    <li class="dropout-menu-item">
+                      <a class="dropout-menu-item-target"><i class="icon-info-sign"></i> About TapReel</i></a>
+                    </li>
+                    <li class="dropout-menu-item">
+                      <a class="dropout-menu-item-target"><i class="icon-legal"></i> Terms of Service</i></a>
+                    </li>
+                    <li class="dropout-menu-item">
+                      <a class="dropout-menu-item-target"><i class="icon-key"></i> Privacy Policy</i></a>
+                    </li>
+                  </ul>
+                </menu>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
       </nav>
     </header>
     <div class="layout-container">
-      <h1 class="jumbo-heading">Surf faster and share better.</h1>
+      <h1 class="jumbo-heading space-top-large">Surf faster and share better.</h1>
       <h2 class="heading">Tap your favorite content and reel the things you love.</h2>
-      <h3 class="subheading">New here?</h3>
+      <h3 class="subheading space-bottom-medium space-top-medium">New here?</h3>
       <button class="auth-button auth-button-provider-facebook">
         <i class="auth-button-icon icon-facebook"></i>
         <span class="auth-button-text">Connect with Facebook</span>
@@ -101,8 +101,8 @@
       <span class="text text-size-small">
         or <a class="link" href="#">sign up with your email</a>.
       </span>
-      <div class="space-top-medium" style="display:block;overflow:hidden;">
-        <article class="reel space-right-medium" style="float:left;width:320px;">
+      <div class="block js-masonry space-top-medium" data-masonry-options='{"columnWidth: 200, "itemSelector": ".reel"}'>
+        <article class="reel">
           <figure class="reel-figure">
             <div class="reel-figure-attachment overlay">
               <img class="reel-figure-attachment-image" src="galaxy.jpg">
@@ -186,7 +186,7 @@
             </div>
           </div>
         </article>
-        <article class="reel space-right-medium" style="float:left;width:320px;">
+        <article class="reel">
           <figure class="reel-figure">
             <div class="reel-figure-attachment">
               <img class="reel-figure-attachment-image" src="galaxy.jpg">
@@ -218,6 +218,9 @@
             </figcaption>
           </figure>
         </article>
+      </div>
+      <div class="space-top-medium" style="display:block;overflow:hidden;">
+
         <article class="slide" style="float:left;width:320px;">
           <figure class="slide-figure">
             <div class="slide-figure-attachment">

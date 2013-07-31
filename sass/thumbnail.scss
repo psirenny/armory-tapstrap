@@ -1,0 +1,61 @@
+@import "compass/typography/vertical_rhythm";
+
+.armor-tapstrap .thumbnail,
+.armor-tapstrap-thumbnail {
+  background-size: cover;
+  display: inline-block;
+  font-size: (8/3) * $base-line-height;
+  line-height: 4 * $base-line-height;
+  max-height: 4 * $base-line-height;
+  position: relative;
+  width: 4 * $base-line-height;
+  &::after {
+    content: '\00a0';
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.armor-tapstrap .thumbnail-clickable,
+.armor-tapstrap-thumbnail-clickable {
+  cursor: pointer;
+  &::after {
+    @include transition(all .2s);
+    background-color: #000;
+    opacity: 0;
+    position: relative;
+  }
+  &:hover::after {
+    opacity: .3;
+  }
+}
+
+@each $size in (xx-small 1) (x-small 2) (small 3) (medium 2 * 4) (large 5) (x-large 6) (xx-large 7) {
+  .armor-tapstrap .thumbnail-size-#{nth($size, 1)},
+  .armor-tapstrap-thumbnail-size-#{nth($size, 1)} {
+    font-size: (2/3) * nth($size, 2) * $base-line-height;
+    line-height: nth($size, 2) * $base-line-height;
+    max-height: nth($size, 2) * $base-line-height;
+    width: nth($size, 2) * $base-line-height;
+  }
+}
+
+.armor-tapstrap .thumbnail-image,
+.armor-tapstrap-thumbnail-image {
+  bottom: 0;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.caption {
+  background-color: #404040;
+  color: #fff;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  line-height: 4 * $base-line-height;
+}

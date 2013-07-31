@@ -22,7 +22,13 @@
 .armor-tapstrap .navigation-bar-section-item,
 .armor-tapstrap-navigation-bar-section-item {
   display: table-cell;
-  display: inline-block;
+  text-align: center;
+  &:last-child {
+    text-align: right;
+  }
+  &:first-child {
+    text-align: left;
+  }
   vertical-align: top;
   & > * {
     vertical-align: top;
