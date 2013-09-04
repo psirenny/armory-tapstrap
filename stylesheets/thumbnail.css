@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined mixin 'transition'.
-        on line 20 of C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/logo.scss, in `transition'
-        from line 20 of C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/logo.scss
+        on line 23 of C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/thumbnail.scss, in `transition'
+        from line 23 of C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/thumbnail.scss
 
 Backtrace:
-C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/logo.scss:20:in `transition'
-C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/logo.scss:20
+C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/thumbnail.scss:23:in `transition'
+C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/thumbnail.scss:23
 C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
 C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
 C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
@@ -84,4 +84,4 @@ C:/Ruby200/bin/compass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'transition'.\A         on line 20 of C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/logo.scss, in `transition'\A         from line 20 of C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/logo.scss"; }
+  content: "Syntax error: Undefined mixin 'transition'.\A         on line 23 of C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/thumbnail.scss, in `transition'\A         from line 23 of C:/Users/dtorres.G-OFFICE/Dropbox/Private/Sites/armory-tapstrap/sass/thumbnail.scss"; }
