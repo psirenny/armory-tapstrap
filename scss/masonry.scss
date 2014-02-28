@@ -1,0 +1,25 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.masonry {
+  @include column-gap(20px);
+  @include columns(6);
+  display: block;
+  margin-bottom: -20px;
+
+  @media (max-width: (620px / .96)) {
+    @include columns(1);
+  }
+  
+  @for $i from 2 through 5 {
+    $minWidth: ($i * 320px - 20px) / .96;
+    $maxWidth: $minWidth + (320px / .96);
+    @media (min-width: $minWidth) and (max-width: $maxWidth) {
+      @include columns($i);
+    }
+  }
+}
+
+.masonry-brick {
+  display: inline-block;
+  margin-bottom: 20px;
+}

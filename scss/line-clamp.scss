@@ -1,0 +1,14 @@
+.armor-tapstrap .line-clamp,
+.armor-tapstrap-line-clamp {
+  display: table !important;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.armor-tapstrap .line-clamp-text,
+.armor-tapstrap-line-clamp-text {
+  display: table-cell;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,31 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.armor-tapstrap .link,
+.armor-tapstrap-link {
+  @include transition(all .2s);
+  color: #008bcc;
+  cursor: pointer;
+  display: inline;
+  &:hover {
+    color: lighten(#008bcc, 20%);
+  }
+}
+
+.armor-tapstrap .link-disabled,
+.armor-tapstrap-link-disabled {
+  color: #ccc;
+  cursor: default;
+  &:hover {
+    color: #ccc;
+  }
+}
+
+.armor-tapstrap .link-callout,
+.armor-tapstrap-link-callout {
+  &[href] {
+    color: #ff3300;
+    &:hover {
+      color: lighten(#ff3300, 20%);
+    }
+  }
+}

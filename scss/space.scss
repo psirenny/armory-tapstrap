@@ -1,0 +1,22 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+@each $dir in top, right, bottom, left {
+  @each $size in (x-small 5px) (small 10px) (medium 20px) (large 40px) (x-large 60px) {
+    .armor-tapstrap .space-#{$dir}-#{nth($size, 1)},
+    .armor-tapstrap-space-#{$dir}-#{nth($size, 1)} {
+      margin-#{$dir}: nth($size, 2);
+    }
+
+    .armor-tapstrap .hold-space-#{$dir}-#{nth($size, 1)},
+    .armor-tapstrap-hold-space-#{$dir}-#{nth($size, 1)} {
+      margin-#{$dir}: -1 * nth($size, 2);
+      @if $dir == top {
+        min-height: nth($size, 2);
+      } @else if $dir == bottom {
+        min-height: nth($size, 2);
+      } @else {
+        min-width: nth($size, 2);
+      }
+    }
+  }
+}

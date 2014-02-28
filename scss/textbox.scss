@@ -1,0 +1,32 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.armor-tapstrap .textbox,
+.armor-tapstrap-textbox {
+  @include transition(all .2s);
+  background-color: #dedede;
+  color: #999;
+  cursor: text;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px;
+  &:focus {
+    background-color: darken(#dedede, 10%);
+    color: darken(#999, 10%);
+    @include placeholder {
+      color: darken(#fff, 15%);
+    }
+  }
+}
+
+.armor-tapstrap .textbox-size-large,
+.armor-tapstrap-textbox-size-large {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.armor-tapstrap .textbox-dark,
+.armor-tapstrap-textbox-dark {
+  background-color: #575757;
+  color: #ccc;
+}

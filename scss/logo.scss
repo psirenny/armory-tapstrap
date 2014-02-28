@@ -1,0 +1,30 @@
+.armor-tapstrap .logo,
+.armor-tapstrap-logo {
+  background-image: inline-image("logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  display: inline-block;
+  font-size: 0/0 a;
+  height: 40px;
+  position: relative;
+  width: 124px;
+}
+
+.armor-tapstrap .logo-clickable,
+.armor-tapstrap-logo-clickable {
+  cursor: pointer;
+  &::after {
+    @include transition(all .2s);
+    background-color: rgba(#000, 0);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &:hover::after {
+    background-color: rgba(#000, 0.3);
+  }
+}

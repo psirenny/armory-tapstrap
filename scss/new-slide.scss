@@ -1,0 +1,45 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.armor-tapstrap .new-slide,
+.armor-tapstrap-new-slide {
+  @include transition(all .2s);
+  background-color: #404040;
+  border: 20px solid #fff;
+  color: #ccc;
+  cursor: pointer;
+  display: table;
+  &:hover {
+    background-color: #008bcc;
+    color: #fff;
+  }
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+}
+
+.armor-tapstrap .new-slide-inner,
+.armor-tapstrap-new-slide-inner {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.armor-tapstrap .new-slide-icon,
+.armor-tapstrap-new-slide-icon {
+  display: block;
+  font-size: 96px;
+  line-height: 100px;
+}
+
+.armor-tapstrap .new-slide-text,
+.armor-tapstrap-new-slide-text {
+  bottom: -20px;
+  display: block;
+  font-size: 14px;
+  position: absolute;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.armor-tapstrap .media,
+.armor-tapstrap-media {
+  @include clearfix;
+  display: block;
+}
+
+.armor-tapstrap .media-image,
+.armor-tapstrap-media-image {
+  display: block;
+  float: left;
+  margin-right: 1rem;
+}
+
+.armor-tapstrap .media-body,
+.armor-tapstrap-media-body {
+  display: table-cell;
+  width: 10000px;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "spice.css",
+  "version": "0.0.0",
+  "main": "index.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "gitHead": "ca1c4c292b79df33a6512ce514a638ed0e072540",
+  "readme": "Spice.css\n---------\n\nSimple [dry css](http://www.vanseodesign.com/css/dry-principles/) classes to spice up your web site.",
+  "readmeFilename": "README.md",
+  "_id": "spice.css@0.1.0",
+  "description": "Spice.css ---------",
+  "commit": "ca1c4c292b79df33a6512ce514a638ed0e072540",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/psirenny/spice.css.git"
+  }
+}

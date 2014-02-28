@@ -1,0 +1,59 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.armor-tapstrap .dropout-context,
+.armor-tapstrap-dropout-context {
+  position: relative;
+}
+
+.armor-tapstrap .dropout-menu,
+.armor-tapstrap-dropout-menu {
+  position: absolute;
+  text-align: left;
+  text-align: start;
+  top: 100%;
+  z-index: 100;
+}
+
+.armor-tapstrap .dropout-toggle-hover:hover .dropout-menu,
+.armor-tapstrap-dropout-toggle-hover:hover .armor-tapstrap-dropout-menu {
+  display: block;
+}
+
+@each $align in top, right, bottom, left {
+  .armor-tapstrap .dropout-menu-align-#{$align},
+  .armor-tapstrap-dropout-menu-align-#{$align} {
+    #{$align}: 0;
+  }
+}
+
+.armor-tapstrap .dropout-menu-items,
+.armor-tapstrap-dropout-menu-items {
+  display: block;
+  background-color: #0089cc;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.armor-tapstrap .dropout-menu-item,
+.armor-tapstrap-dropout-menu-item {
+  display: block;
+}
+
+.armor-tapstrap .dropout-menu-item-target,
+.armor-tapstrap-dropout-menu-item-target {
+  @include transition(all .2s);
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: none;
+  padding: 5px 10px;
+  white-space: nowrap;
+  &:hover {
+    background-color: #3cbfff;
+  }
+}

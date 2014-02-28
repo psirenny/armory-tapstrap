@@ -1,0 +1,25 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.armor-tapstrap .form,
+.armor-tapstrap-form {
+  @include clearfix;
+  display: block;
+}
+
+.armor-tapstrap .form-controls,
+.armor-tapstrap-form-controls {
+  display: block;
+}
+
+.armor-tapstrap .form-control-items,
+.armor-tapstrap-form-control-items {
+  display: block;
+  margin-bottom: -20px;
+  min-height: 20px;
+}
+
+.armor-tapstrap .form-control-item,
+.armor-tapstrap-form-control-item {
+  display: block;
+  margin-bottom: 20px;
+}

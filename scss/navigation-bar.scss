@@ -1,0 +1,34 @@
+.armor-tapstrap .navigation-bar,
+.armor-tapstrap-navigation-bar {
+  background-color: #000;
+  display: block;
+  min-height: 40px;
+}
+
+.armor-tapstrap .navigation-bar-sections,
+.armor-tapstrap-navigation-bar-sections {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.armor-tapstrap .navigation-bar-section-items,
+.armor-tapstrap-navigation-bar-section-items {
+  display: table-row;
+}
+
+.armor-tapstrap .navigation-bar-section-item,
+.armor-tapstrap-navigation-bar-section-item {
+  display: table-cell;
+  text-align: center;
+  &:last-child {
+    text-align: right;
+  }
+  &:first-child {
+    text-align: left;
+  }
+  vertical-align: top;
+  & > * {
+    vertical-align: top;
+  }
+}

@@ -1,0 +1,34 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.armor-tapstrap .text,
+.armor-tapstrap-text {
+  color: #999;
+  cursor: text;
+  display: inline;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@each $size in (x-small 12px 20px) (small 14px 20px) (medium 16px 20px) (large 18px 40px) (x-large 20px 40px) {
+  .armor-tapstrap .text-size-#{nth($size, 1)},
+  .armor-tapstrap-text-size-#{nth($size, 1)} {
+    font-size: nth($size, 2);
+    line-height: nth($size, 3);
+  }
+}
+
+.armor-tapstrap .text-color-dark,
+.armor-tapstrap-text-color-dark {
+  color: #666;
+}
+
+.armor-tapstrap .text-color-light,
+.armor-tapstrap-text-color-light {
+  color: #ccc;
+}
+
+.armor-tapstrap .text-inverted,
+.armor-tapstrap-text-inverted {
+  color: #fff;
+}

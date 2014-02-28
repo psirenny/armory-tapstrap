@@ -1,9 +1,10 @@
 {
   "dependencies": {
+    "bourbon": "*",
     "font-awesome": "*"
   },
   "name": "armory-tapstrap",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "ignore": [
     "**/.*",
     "node_modules",
