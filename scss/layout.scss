@@ -10,7 +10,7 @@
     $minWidth: ($i * 320px - 20px) / .96;
     $maxWidth: $minWidth + (320px / .96);
     @media (min-width: $minWidth) {
-      width: $maxWidth;
+      max-width: $maxWidth;
     }
   }
 }

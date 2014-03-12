@@ -1,0 +1,33 @@
+{
+  "author": "psirenny <djtorres0@gmail.com>",
+  "description": "UI framework for TapReel.",
+  "directories": {
+    "test": "test"
+  },
+  "bugs": {
+    "url": "https://github.com/psirenny/armory-tapstrap/issues"
+  },
+  "dependencies": {
+    "gulp": "*",
+    "gulp-data-uri": "*",
+    "gulp-sass": "*"
+  },
+  "homepage": "https://github.com/psirenny/armory-tapstrap",
+  "keywords": [
+    "tapreel",
+    "ui",
+    "framework",
+    "css"
+  ],
+  "license": "MIT",
+  "main": "gulpfile.js",
+  "name": "armory-tapstrap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psirenny/armory-tapstrap.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.0"
+}
