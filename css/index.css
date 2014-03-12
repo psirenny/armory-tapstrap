@@ -29,7 +29,7 @@ html, body {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
-  padding: rhythm(0.5, 14px) rhythm(2, 14px);
+  padding: 10px 40px;
   overflow: hidden;
   position: relative;
   text-align: center; }
