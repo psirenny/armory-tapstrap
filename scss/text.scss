@@ -6,18 +6,9 @@
   cursor: text;
   display: inline;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 20px;
 }
-
-@each $size in (x-small 12px 20px) (small 14px 20px) (medium 16px 20px) (large 18px 40px) (x-large 20px 40px) {
-  .armor-tapstrap .text-size-#{nth($size, 1)},
-  .armor-tapstrap-text-size-#{nth($size, 1)} {
-    font-size: nth($size, 2);
-    line-height: nth($size, 3);
-  }
-}
-
 .armor-tapstrap .text-color-dark,
 .armor-tapstrap-text-color-dark {
   color: #666;
@@ -31,4 +22,12 @@
 .armor-tapstrap .text-inverted,
 .armor-tapstrap-text-inverted {
   color: #fff;
+}
+
+@each $size in (x-small 11px 15px) (small 12px 15px) (medium 13px 15px) (large 14px 20px) (x-large 15px 20px) {
+  .armor-tapstrap .text-size-#{nth($size, 1)},
+  .armor-tapstrap-text-size-#{nth($size, 1)} {
+    font-size: nth($size, 2);
+    line-height: nth($size, 3);
+  }
 }
