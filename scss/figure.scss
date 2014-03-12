@@ -1,0 +1,38 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.armor-tapstrap .figure,
+.armor-tapstrap-figure {
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: block;
+}
+
+.armor-tapstrap .figure-thumbnail,
+.armor-tapstrap-figure-thumbnail {
+  display: block;
+  margin: 20px;
+}
+
+.armor-tapstrap .figure-thumbnail-image,
+.armor-tapstrap-figure-thumbnail-image {
+  display: block;
+  width: 100%;
+}
+
+.armor-tapstrap .figure-caption,
+.armor-tapstrap-figure-caption {
+  display: block;
+  margin: 20px;
+}
+
+.armor-tapstrap .figure-comments,
+.armor-tapstrap-figure-comments {
+  background-color: #eaf8ff;
+  display: block;
+  padding: 20px;
+}
+
+.armor-tapstrap .figure-caption + .figure-comments {
+  margin-top: -10px;
+  padding-top: 10px;
+}
