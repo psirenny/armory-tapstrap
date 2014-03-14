@@ -6,6 +6,7 @@
   color: #008bcc;
   cursor: pointer;
   display: inline;
+  text-decoration: none;
   &:hover {
     color: lighten(#008bcc, 20%);
   }

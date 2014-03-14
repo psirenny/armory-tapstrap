@@ -3,6 +3,11 @@ html, body {
   height: 100%;
   width: 100%; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .armor-tapstrap .auth-button-provider-facebook, .armor-tapstrap-auth-button-provider-facebook {
   background-color: #395692; }
   .armor-tapstrap .auth-button-provider-facebook:hover, .armor-tapstrap-auth-button-provider-facebook:hover {
@@ -22,7 +27,7 @@ html, body {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
-  border-color: #fff;
+  border: none;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4) inset;
   color: #fff;
   cursor: pointer;
@@ -62,6 +67,7 @@ html, body {
   -moz-transition: all 0.2s;
   transition: all 0.2s;
   background-color: #404040;
+  border: none;
   color: #ccc;
   cursor: pointer;
   display: inline-block;
@@ -147,6 +153,9 @@ html, body {
   position: relative; }
 
 .armor-tapstrap .dropout-menu, .armor-tapstrap-dropout-menu {
+  display: none;
+  margin: 0;
+  padding: 0;
   position: absolute;
   text-align: left;
   text-align: start;
@@ -171,8 +180,8 @@ html, body {
 .armor-tapstrap .dropout-menu-items, .armor-tapstrap-dropout-menu-items {
   display: block;
   background-color: #0089cc;
-  padding-bottom: 10px;
-  padding-top: 10px; }
+  margin: 0;
+  padding: 10px 0; }
 
 .armor-tapstrap .dropout-menu-item, .armor-tapstrap-dropout-menu-item {
   display: block; }
@@ -188,6 +197,7 @@ html, body {
   font-weight: normal;
   line-height: 20px;
   overflow: hidden;
+  text-decoration: none;
   text-overflow: ellipsis;
   text-transform: none;
   padding: 5px 10px;
@@ -247,7 +257,8 @@ html, body {
   display: block;
   font-size: 36px;
   letter-spacing: -0.05em;
-  line-height: 40px; }
+  line-height: 40px;
+  margin: 0; }
 
 .armor-tapstrap .heading-inverted, .armor-tapstrap-heading-inverted {
   color: #fff; }
@@ -273,7 +284,8 @@ html, body {
   font-size: 72px;
   font-weight: bold;
   letter-spacing: -0.05em;
-  line-height: 80px; }
+  line-height: 80px;
+  margin: 0; }
 
 .armor-tapstrap .layout-container, .armor-tapstrap-layout-container {
   display: block;
@@ -312,7 +324,8 @@ html, body {
   transition: all 0.2s;
   color: #008bcc;
   cursor: pointer;
-  display: inline; }
+  display: inline;
+  text-decoration: none; }
   .armor-tapstrap .link:hover, .armor-tapstrap-link:hover {
     color: #33beff; }
 
@@ -543,7 +556,8 @@ html, body {
   cursor: text;
   display: block;
   font-size: 13px;
-  line-height: 20px; }
+  line-height: 20px;
+  margin: 0; }
 
 .armor-tapstrap .paragraph-color-dark, .armor-tapstrap-paragraph-color-dark {
   color: #666; }
@@ -952,7 +966,8 @@ html, body {
   display: block;
   font-size: 36px;
   font-weight: bold;
-  line-height: 40px; }
+  line-height: 40px;
+  margin: 0; }
 
 .armor-tapstrap .tab, .armor-tapstrap-tab {
   -webkit-transition: all 0.2s;
@@ -1021,11 +1036,13 @@ html, body {
   -moz-transition: all 0.2s;
   transition: all 0.2s;
   background-color: #dedede;
+  border: none;
   color: #999;
   cursor: text;
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
+  outline: none;
   padding: 10px; }
   .armor-tapstrap .textbox:focus, .armor-tapstrap-textbox:focus {
     background-color: #c5c5c5;

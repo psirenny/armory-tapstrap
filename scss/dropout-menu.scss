@@ -7,6 +7,9 @@
 
 .armor-tapstrap .dropout-menu,
 .armor-tapstrap-dropout-menu {
+  display: none;
+  margin: 0;
+  padding: 0;
   position: absolute;
   text-align: left;
   text-align: start;
@@ -30,8 +33,8 @@
 .armor-tapstrap-dropout-menu-items {
   display: block;
   background-color: #0089cc;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  margin: 0;
+  padding: 10px 0;
 }
 
 .armor-tapstrap .dropout-menu-item,
@@ -49,6 +52,7 @@
   font-weight: normal;
   line-height: 20px;
   overflow: hidden;
+  text-decoration: none;
   text-overflow: ellipsis;
   text-transform: none;
   padding: 5px 10px;
