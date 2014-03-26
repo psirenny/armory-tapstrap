@@ -1,0 +1,19 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.carousel {
+  display: block;
+}
+
+.carousel-items {
+  @include clearfix;
+  display: block;
+  margin: 0 -5px 0 0;
+  min-width: 5px;
+  padding: 0;
+}
+
+.carousel-item {
+  display: block;
+  float: left;
+  margin-right: 5px;
+}

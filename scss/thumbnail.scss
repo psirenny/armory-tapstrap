@@ -2,13 +2,10 @@
 
 .armor-tapstrap .thumbnail,
 .armor-tapstrap-thumbnail {
-  background-size: cover;
   display: inline-block;
-  font-size: 32px;
-  line-height: 48px;
-  max-height: 48px;
+  line-height: 40px;
   position: relative;
-  width: 48px;
+  width: 40px;
   &::after {
     content: '\00a0';
     display: inline-block;
@@ -30,16 +27,6 @@
   }
 }
 
-@each $size in (x-small 16px) (small 32px) (medium 48px) (large 64px) (x-large 80px) {
-  .armor-tapstrap .thumbnail-size-#{nth($size, 1)},
-  .armor-tapstrap-thumbnail-size-#{nth($size, 1)} {
-    font-size: (2/3) * nth($size, 2);
-    line-height: nth($size, 2);
-    max-height: nth($size, 2);
-    width: nth($size, 2);
-  }
-}
-
 .armor-tapstrap .thumbnail-image,
 .armor-tapstrap-thumbnail-image {
   bottom: 0;
@@ -50,11 +37,4 @@
   right: 0;
   top: 0;
   width: 100%;
-}
-
-.caption {
-  background-color: #404040;
-  color: #fff;
-  display: inline-block;
-  line-height: 80px;
 }

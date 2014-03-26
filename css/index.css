@@ -76,17 +76,22 @@ html, body {
   height: 40px;
   line-height: 40px;
   min-width: 40px;
+  outline: 0;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle; }
   .armor-tapstrap .button.active, .armor-tapstrap .button:hover, .armor-tapstrap-button.active, .armor-tapstrap-button:hover {
     background-color: #008bcc;
     color: #fff; }
   .armor-tapstrap .button:disabled, .armor-tapstrap-button:disabled {
-    background-color: #b3b3b3;
+    color: rgba(204, 204, 204, 0.2);
     cursor: default; }
+    .armor-tapstrap .button:disabled:hover, .armor-tapstrap-button:disabled:hover {
+      background-color: #404040;
+      color: rgba(204, 204, 204, 0.2); }
 
 .armor-tapstrap .button-icon, .armor-tapstrap-button-icon {
   line-height: inherit; }
@@ -116,18 +121,43 @@ html, body {
     top: 13px; }
   .armor-tapstrap .button-group > .button:first-child::before, .armor-tapstrap .button-group > .button:first-child::after, .armor-tapstrap-button-group > .armor-tapstrap-button:first-child::before, .armor-tapstrap-button-group > .armor-tapstrap-button:first-child::after {
     content: none; }
-  .armor-tapstrap .button-group > .button:hover + .button::after, .armor-tapstrap .button-group > .button:hover + .armor-tapstrap-button::after, .armor-tapstrap .button-group > .button:hover::after, .armor-tapstrap-button-group > .armor-tapstrap-button:hover + .button::after, .armor-tapstrap-button-group > .armor-tapstrap-button:hover + .armor-tapstrap-button::after, .armor-tapstrap-button-group > .armor-tapstrap-button:hover::after {
+  .armor-tapstrap .button-group > .button:hover:not(:disabled) + .button::after, .armor-tapstrap .button-group > .button:hover:not(:disabled) + .armor-tapstrap-button::after, .armor-tapstrap .button-group > .button:hover:not(:disabled)::after, .armor-tapstrap-button-group > .armor-tapstrap-button:hover:not(:disabled) + .button::after, .armor-tapstrap-button-group > .armor-tapstrap-button:hover:not(:disabled) + .armor-tapstrap-button::after, .armor-tapstrap-button-group > .armor-tapstrap-button:hover:not(:disabled)::after {
     background-color: #404040; }
+
+.carousel {
+  display: block; }
+
+.carousel-items {
+  *zoom: 1;
+  display: block;
+  margin: 0 -5px 0 0;
+  min-width: 5px;
+  padding: 0; }
+  .carousel-items:before, .carousel-items:after {
+    content: " ";
+    display: table; }
+  .carousel-items:after {
+    clear: both; }
+
+.carousel-item {
+  display: block;
+  float: left;
+  margin-right: 5px; }
 
 .armor-tapstrap .comment-bubble, .armor-tapstrap-coment-bubble {
   background-color: #333;
   border-radius: 0.5rem;
   color: #ccc;
   display: inline-block;
-  padding-left: 6px;
-  padding-right: 6px;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 14px;
+  margin-bottom: 13px;
+  margin-top: 13px;
+  padding-left: 5px;
+  padding-right: 5px;
   position: relative; }
-  .armor-tapstrap .comment-bubble::before, .armor-tapstrap-coment-bubble::before {
+  .armor-tapstrap .comment-bubble::after, .armor-tapstrap-coment-bubble::after {
     -webkit-transform: rotate(15deg);
     -moz-transform: rotate(15deg);
     -ms-transform: rotate(15deg);
@@ -135,18 +165,18 @@ html, body {
     transform: rotate(15deg);
     border-right: 8px solid transparent;
     border-top: 8px solid #333;
-    bottom: -3px;
+    bottom: -5px;
     content: '';
     display: block;
     height: 0;
-    left: 6px;
+    left: 3px;
     position: absolute;
     width: 0; }
 
 .armor-tapstrap .comment-bubble-inverted, .armor-tapstrap-coment-bubble-inverted {
   background-color: #ccc;
   color: #333; }
-  .armor-tapstrap .comment-bubble-inverted::before, .armor-tapstrap-coment-bubble-inverted::before {
+  .armor-tapstrap .comment-bubble-inverted::after, .armor-tapstrap-coment-bubble-inverted::after {
     border-top-color: #ccc; }
 
 .armor-tapstrap .dropout-context, .armor-tapstrap-dropout-context {
@@ -245,15 +275,16 @@ html, body {
 
 .armor-tapstrap .form-control-items, .armor-tapstrap-form-control-items {
   display: block;
-  margin-bottom: -20px;
-  min-height: 20px; }
+  margin: 0 0 -20px;
+  min-height: 20px;
+  padding: 0; }
 
 .armor-tapstrap .form-control-item, .armor-tapstrap-form-control-item {
   display: block;
   margin-bottom: 20px; }
 
 .armor-tapstrap .heading, .armor-tapstrap-heading {
-  color: #999;
+  color: #666;
   display: block;
   font-size: 36px;
   letter-spacing: -0.05em;
@@ -408,7 +439,8 @@ html, body {
 
 .armor-tapstrap .media, .armor-tapstrap-media {
   *zoom: 1;
-  display: block; }
+  display: block;
+  margin: 0; }
   .armor-tapstrap .media:before, .armor-tapstrap .media:after, .armor-tapstrap-media:before, .armor-tapstrap-media:after {
     content: " ";
     display: table; }
@@ -490,8 +522,8 @@ html, body {
   transition: all 0.2s;
   display: block;
   height: 100%;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
   position: fixed;
   top: 0;
   z-index: 10;
@@ -504,7 +536,7 @@ html, body {
 
 .armor-tapstrap .off-canvas-column-toggle, .armor-tapstrap-off-canvas-column-toggle {
   display: block;
-  margin-left: -7.7%; }
+  margin-left: -3.7%; }
 
 .armor-tapstrap .overlay, .armor-tapstrap-overlay {
   position: relative; }
@@ -797,147 +829,148 @@ html, body {
   display: block; }
 
 .armor-tapstrap .space-top-x-small, .armor-tapstrap-space-top-x-small {
-  margin-top: 5px; }
+  margin-top: 5px !important; }
 
 .armor-tapstrap .hold-space-top-x-small, .armor-tapstrap-hold-space-top-x-small {
-  margin-top: -5px;
+  margin-top: -5px !important;
   min-height: 5px; }
 
 .armor-tapstrap .space-top-small, .armor-tapstrap-space-top-small {
-  margin-top: 10px; }
+  margin-top: 10px !important; }
 
 .armor-tapstrap .hold-space-top-small, .armor-tapstrap-hold-space-top-small {
-  margin-top: -10px;
+  margin-top: -10px !important;
   min-height: 10px; }
 
 .armor-tapstrap .space-top-medium, .armor-tapstrap-space-top-medium {
-  margin-top: 20px; }
+  margin-top: 20px !important; }
 
 .armor-tapstrap .hold-space-top-medium, .armor-tapstrap-hold-space-top-medium {
-  margin-top: -20px;
+  margin-top: -20px !important;
   min-height: 20px; }
 
 .armor-tapstrap .space-top-large, .armor-tapstrap-space-top-large {
-  margin-top: 40px; }
+  margin-top: 40px !important; }
 
 .armor-tapstrap .hold-space-top-large, .armor-tapstrap-hold-space-top-large {
-  margin-top: -40px;
+  margin-top: -40px !important;
   min-height: 40px; }
 
 .armor-tapstrap .space-top-x-large, .armor-tapstrap-space-top-x-large {
-  margin-top: 60px; }
+  margin-top: 60px !important; }
 
 .armor-tapstrap .hold-space-top-x-large, .armor-tapstrap-hold-space-top-x-large {
-  margin-top: -60px;
+  margin-top: -60px !important;
   min-height: 60px; }
 
 .armor-tapstrap .space-right-x-small, .armor-tapstrap-space-right-x-small {
-  margin-right: 5px; }
+  margin-right: 5px !important; }
 
 .armor-tapstrap .hold-space-right-x-small, .armor-tapstrap-hold-space-right-x-small {
-  margin-right: -5px;
+  margin-right: -5px !important;
   min-width: 5px; }
 
 .armor-tapstrap .space-right-small, .armor-tapstrap-space-right-small {
-  margin-right: 10px; }
+  margin-right: 10px !important; }
 
 .armor-tapstrap .hold-space-right-small, .armor-tapstrap-hold-space-right-small {
-  margin-right: -10px;
+  margin-right: -10px !important;
   min-width: 10px; }
 
 .armor-tapstrap .space-right-medium, .armor-tapstrap-space-right-medium {
-  margin-right: 20px; }
+  margin-right: 20px !important; }
 
 .armor-tapstrap .hold-space-right-medium, .armor-tapstrap-hold-space-right-medium {
-  margin-right: -20px;
+  margin-right: -20px !important;
   min-width: 20px; }
 
 .armor-tapstrap .space-right-large, .armor-tapstrap-space-right-large {
-  margin-right: 40px; }
+  margin-right: 40px !important; }
 
 .armor-tapstrap .hold-space-right-large, .armor-tapstrap-hold-space-right-large {
-  margin-right: -40px;
+  margin-right: -40px !important;
   min-width: 40px; }
 
 .armor-tapstrap .space-right-x-large, .armor-tapstrap-space-right-x-large {
-  margin-right: 60px; }
+  margin-right: 60px !important; }
 
 .armor-tapstrap .hold-space-right-x-large, .armor-tapstrap-hold-space-right-x-large {
-  margin-right: -60px;
+  margin-right: -60px !important;
   min-width: 60px; }
 
 .armor-tapstrap .space-bottom-x-small, .armor-tapstrap-space-bottom-x-small {
-  margin-bottom: 5px; }
+  margin-bottom: 5px !important; }
 
 .armor-tapstrap .hold-space-bottom-x-small, .armor-tapstrap-hold-space-bottom-x-small {
-  margin-bottom: -5px;
+  margin-bottom: -5px !important;
   min-height: 5px; }
 
 .armor-tapstrap .space-bottom-small, .armor-tapstrap-space-bottom-small {
-  margin-bottom: 10px; }
+  margin-bottom: 10px !important; }
 
 .armor-tapstrap .hold-space-bottom-small, .armor-tapstrap-hold-space-bottom-small {
-  margin-bottom: -10px;
+  margin-bottom: -10px !important;
   min-height: 10px; }
 
 .armor-tapstrap .space-bottom-medium, .armor-tapstrap-space-bottom-medium {
-  margin-bottom: 20px; }
+  margin-bottom: 20px !important; }
 
 .armor-tapstrap .hold-space-bottom-medium, .armor-tapstrap-hold-space-bottom-medium {
-  margin-bottom: -20px;
+  margin-bottom: -20px !important;
   min-height: 20px; }
 
 .armor-tapstrap .space-bottom-large, .armor-tapstrap-space-bottom-large {
-  margin-bottom: 40px; }
+  margin-bottom: 40px !important; }
 
 .armor-tapstrap .hold-space-bottom-large, .armor-tapstrap-hold-space-bottom-large {
-  margin-bottom: -40px;
+  margin-bottom: -40px !important;
   min-height: 40px; }
 
 .armor-tapstrap .space-bottom-x-large, .armor-tapstrap-space-bottom-x-large {
-  margin-bottom: 60px; }
+  margin-bottom: 60px !important; }
 
 .armor-tapstrap .hold-space-bottom-x-large, .armor-tapstrap-hold-space-bottom-x-large {
-  margin-bottom: -60px;
+  margin-bottom: -60px !important;
   min-height: 60px; }
 
 .armor-tapstrap .space-left-x-small, .armor-tapstrap-space-left-x-small {
-  margin-left: 5px; }
+  margin-left: 5px !important; }
 
 .armor-tapstrap .hold-space-left-x-small, .armor-tapstrap-hold-space-left-x-small {
-  margin-left: -5px;
+  margin-left: -5px !important;
   min-width: 5px; }
 
 .armor-tapstrap .space-left-small, .armor-tapstrap-space-left-small {
-  margin-left: 10px; }
+  margin-left: 10px !important; }
 
 .armor-tapstrap .hold-space-left-small, .armor-tapstrap-hold-space-left-small {
-  margin-left: -10px;
+  margin-left: -10px !important;
   min-width: 10px; }
 
 .armor-tapstrap .space-left-medium, .armor-tapstrap-space-left-medium {
-  margin-left: 20px; }
+  margin-left: 20px !important; }
 
 .armor-tapstrap .hold-space-left-medium, .armor-tapstrap-hold-space-left-medium {
-  margin-left: -20px;
+  margin-left: -20px !important;
   min-width: 20px; }
 
 .armor-tapstrap .space-left-large, .armor-tapstrap-space-left-large {
-  margin-left: 40px; }
+  margin-left: 40px !important; }
 
 .armor-tapstrap .hold-space-left-large, .armor-tapstrap-hold-space-left-large {
-  margin-left: -40px;
+  margin-left: -40px !important;
   min-width: 40px; }
 
 .armor-tapstrap .space-left-x-large, .armor-tapstrap-space-left-x-large {
-  margin-left: 60px; }
+  margin-left: 60px !important; }
 
 .armor-tapstrap .hold-space-left-x-large, .armor-tapstrap-hold-space-left-x-large {
-  margin-left: -60px;
+  margin-left: -60px !important;
   min-width: 60px; }
 
 .armor-tapstrap .stack, .armor-tapstrap-stack, .armor-tapstrap .stack-items, .armor-tapstrap-stack-items, .armor-tapstrap .stack-item, .armor-tapstrap-stack-item {
-  display: block; }
+  display: block;
+  padding: 0; }
 
 .armor-tapstrap .stack-item, .armor-tapstrap-stack-item {
   *zoom: 1; }
@@ -962,7 +995,7 @@ html, body {
   height: auto; }
 
 .armor-tapstrap .subheading, .armor-tapstrap-subheading {
-  color: #666;
+  color: #999;
   display: block;
   font-size: 36px;
   font-weight: bold;
@@ -1089,14 +1122,25 @@ html, body {
   font-size: 16px;
   line-height: inherit; }
 
+.text-list {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+.text-list-item {
+  color: #999;
+  display: list-item;
+  font-size: 13px;
+  line-height: 20px;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0; }
+
 .armor-tapstrap .thumbnail, .armor-tapstrap-thumbnail {
-  background-size: cover;
   display: inline-block;
-  font-size: 32px;
-  line-height: 48px;
-  max-height: 48px;
+  line-height: 40px;
   position: relative;
-  width: 48px; }
+  width: 40px; }
   .armor-tapstrap .thumbnail::after, .armor-tapstrap-thumbnail::after {
     content: '\00a0';
     display: inline-block;
@@ -1114,36 +1158,6 @@ html, body {
   .armor-tapstrap .thumbnail-clickable:hover::after, .armor-tapstrap-thumbnail-clickable:hover::after {
     opacity: 0.3; }
 
-.armor-tapstrap .thumbnail-size-x-small, .armor-tapstrap-thumbnail-size-x-small {
-  font-size: 10.66667px;
-  line-height: 16px;
-  max-height: 16px;
-  width: 16px; }
-
-.armor-tapstrap .thumbnail-size-small, .armor-tapstrap-thumbnail-size-small {
-  font-size: 21.33333px;
-  line-height: 32px;
-  max-height: 32px;
-  width: 32px; }
-
-.armor-tapstrap .thumbnail-size-medium, .armor-tapstrap-thumbnail-size-medium {
-  font-size: 32px;
-  line-height: 48px;
-  max-height: 48px;
-  width: 48px; }
-
-.armor-tapstrap .thumbnail-size-large, .armor-tapstrap-thumbnail-size-large {
-  font-size: 42.66667px;
-  line-height: 64px;
-  max-height: 64px;
-  width: 64px; }
-
-.armor-tapstrap .thumbnail-size-x-large, .armor-tapstrap-thumbnail-size-x-large {
-  font-size: 53.33333px;
-  line-height: 80px;
-  max-height: 80px;
-  width: 80px; }
-
 .armor-tapstrap .thumbnail-image, .armor-tapstrap-thumbnail-image {
   bottom: 0;
   display: block;
@@ -1153,12 +1167,6 @@ html, body {
   right: 0;
   top: 0;
   width: 100%; }
-
-.caption {
-  background-color: #404040;
-  color: #fff;
-  display: inline-block;
-  line-height: 80px; }
 
 .armor-tapstrap .thumbnail-carousel, .armor-tapstrap-thumbnail-carousel {
   display: block; }

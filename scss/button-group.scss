@@ -36,7 +36,7 @@
       content: none;
     }
   }
-  &:hover {
+  &:hover:not(:disabled) {
     & + .button::after,
     & + .armor-tapstrap-button::after,
     &::after {

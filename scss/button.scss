@@ -13,9 +13,11 @@
   height: 40px;
   line-height: 40px;
   min-width: 40px;
+  outline: 0;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
   &.active,
@@ -24,8 +26,12 @@
     color: #fff;
   }
   &:disabled {
-    background-color: lighten(#999, 10%);
+    color: rgba(#ccc, .2);
     cursor: default;
+    &:hover {
+      background-color: #404040;
+      color: rgba(#ccc, .2);
+    }
   }
 }
 
