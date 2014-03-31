@@ -2,8 +2,11 @@
 
 .armor-tapstrap .thumbnail,
 .armor-tapstrap-thumbnail {
+  border: none;
   display: inline-block;
   line-height: 40px;
+  outline: 0;
+  padding: 0;
   position: relative;
   width: 40px;
   &::after {

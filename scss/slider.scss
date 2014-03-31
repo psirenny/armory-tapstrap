@@ -1,0 +1,22 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+.armor-tapstrap .slider,
+.armor-tapstrap-slider {
+  display: block;
+}
+
+.armor-tapstrap .slider-items,
+.armor-tapstrap-slider-items {
+  @include clearfix;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.armor-tapstrap .slider-item,
+.armor-tapstrap-slider-item {
+  display: block;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+}
