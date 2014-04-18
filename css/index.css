@@ -287,6 +287,7 @@ html, body {
   color: #666;
   display: block;
   font-size: 36px;
+  font-weight: normal;
   letter-spacing: -0.05em;
   line-height: 40px;
   margin: 0; }
@@ -480,7 +481,7 @@ html, body {
   .armor-tapstrap .navigation-bar-section-item > *, .armor-tapstrap-navigation-bar-section-item > * {
     vertical-align: top; }
 
-.armor-tapstrap .new-slide, .armor-tapstrap-new-slide {
+.armor-tapstrap .new-figure, .armor-tapstrap-new-figure {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -488,32 +489,25 @@ html, body {
   border: 20px solid #fff;
   color: #ccc;
   cursor: pointer;
-  display: table; }
-  .armor-tapstrap .new-slide:hover, .armor-tapstrap-new-slide:hover {
+  display: block;
+  text-decoration: none;
+  width: 300px; }
+  .armor-tapstrap .new-figure:hover, .armor-tapstrap-new-figure:hover {
     background-color: #008bcc;
     color: #fff; }
-  .armor-tapstrap .new-slide::before, .armor-tapstrap-new-slide::before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em; }
 
-.armor-tapstrap .new-slide-inner, .armor-tapstrap-new-slide-inner {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle; }
-
-.armor-tapstrap .new-slide-icon, .armor-tapstrap-new-slide-icon {
+.armor-tapstrap .new-figure-icon, .armor-tapstrap .new-figure-icon {
   display: block;
-  font-size: 96px;
-  line-height: 100px; }
+  font-size: 84px;
+  margin-bottom: 18px;
+  margin-top: 138px;
+  text-align: center; }
 
-.armor-tapstrap .new-slide-text, .armor-tapstrap-new-slide-text {
-  bottom: -20px;
+.armor-tapstrap .new-figure-text, .armor-tapstrap-new-figure-text {
   display: block;
-  font-size: 14px;
-  position: absolute;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 100px;
   text-align: center; }
 
 .armor-tapstrap .off-canvas-column, .armor-tapstrap-off-canvas-column {
@@ -827,7 +821,9 @@ html, body {
   *zoom: 1;
   display: block;
   margin: 0;
-  padding: 0; }
+  overflow: visible !important;
+  padding: 0;
+  position: relative; }
   .armor-tapstrap .slider-items:before, .armor-tapstrap .slider-items:after, .armor-tapstrap-slider-items:before, .armor-tapstrap-slider-items:after {
     content: " ";
     display: table; }
@@ -1082,24 +1078,24 @@ html, body {
   transition: all 0.2s;
   background-color: #dedede;
   border: none;
-  color: #999;
+  color: #666;
   cursor: text;
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
   outline: none;
-  padding: 10px; }
+  padding: 10px;
+  width: 100%; }
+  .armor-tapstrap .textbox::-webkit-input-placeholder, .armor-tapstrap-textbox::-webkit-input-placeholder {
+    color: #999; }
+  .armor-tapstrap .textbox:-moz-placeholder, .armor-tapstrap-textbox:-moz-placeholder {
+    color: #999; }
+  .armor-tapstrap .textbox::-moz-placeholder, .armor-tapstrap-textbox::-moz-placeholder {
+    color: #999; }
+  .armor-tapstrap .textbox:-ms-input-placeholder, .armor-tapstrap-textbox:-ms-input-placeholder {
+    color: #999; }
   .armor-tapstrap .textbox:focus, .armor-tapstrap-textbox:focus {
-    background-color: #c5c5c5;
-    color: #808080; }
-    .armor-tapstrap .textbox:focus::-webkit-input-placeholder, .armor-tapstrap-textbox:focus::-webkit-input-placeholder {
-      color: #d9d9d9; }
-    .armor-tapstrap .textbox:focus:-moz-placeholder, .armor-tapstrap-textbox:focus:-moz-placeholder {
-      color: #d9d9d9; }
-    .armor-tapstrap .textbox:focus::-moz-placeholder, .armor-tapstrap-textbox:focus::-moz-placeholder {
-      color: #d9d9d9; }
-    .armor-tapstrap .textbox:focus:-ms-input-placeholder, .armor-tapstrap-textbox:focus:-ms-input-placeholder {
-      color: #d9d9d9; }
+    background-color: #c5c5c5; }
 
 .armor-tapstrap .textbox-size-large, .armor-tapstrap-textbox-size-large {
   font-size: 36px;

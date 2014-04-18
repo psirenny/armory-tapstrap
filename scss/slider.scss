@@ -10,7 +10,9 @@
   @include clearfix;
   display: block;
   margin: 0;
+  overflow: visible !important;
   padding: 0;
+  position: relative;
 }
 
 .armor-tapstrap .slider-item,

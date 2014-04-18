@@ -5,19 +5,19 @@
   @include transition(all .2s);
   background-color: #dedede;
   border: none;
-  color: #999;
+  color: #666;
   cursor: text;
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
   outline: none;
   padding: 10px;
+  width: 100%;
+  @include placeholder {
+    color: #999
+  }
   &:focus {
     background-color: darken(#dedede, 10%);
-    color: darken(#999, 10%);
-    @include placeholder {
-      color: darken(#fff, 15%);
-    }
   }
 }
 
