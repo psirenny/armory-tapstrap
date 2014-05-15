@@ -501,27 +501,23 @@ html, body {
     background-color: #008bcc;
     color: #fff; }
 
-.armor-tapstrap .new-figure-icon, .armor-tapstrap .new-figure-icon {
+.armor-tapstrap .new-figure-icon, .armor-tapstrap .new-figure-icon, .armor-tapstrap .new-figure-text, .armor-tapstrap-new-figure-text {
   display: block;
-  font-size: 84px;
   left: 0;
-  line-height: 100px;
-  margin-top: -50px;
   position: absolute;
   right: 0;
   text-align: center;
   top: 50%; }
 
+.armor-tapstrap .new-figure-icon, .armor-tapstrap .new-figure-icon {
+  font-size: 84px;
+  line-height: 100px;
+  margin-top: -50px; }
+
 .armor-tapstrap .new-figure-text, .armor-tapstrap-new-figure-text {
-  display: block;
   font-size: 15px;
-  left: 0;
   line-height: 20px;
-  margin-top: 50px;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 50%; }
+  margin-top: 50px; }
 
 .armor-tapstrap .off-canvas-column, .armor-tapstrap-off-canvas-column {
   -webkit-transition: all 0.2s;
