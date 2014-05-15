@@ -5,11 +5,12 @@
   @include columns(6);
   display: block;
   margin-bottom: -20px;
+  padding: 0;
 
   @media (max-width: (620px / .96)) {
     @include columns(1);
   }
-  
+
   @for $i from 2 through 5 {
     $minWidth: ($i * 320px - 20px) / .96;
     $maxWidth: $minWidth + (320px / .96);
@@ -22,4 +23,5 @@
 .masonry-brick {
   display: inline-block;
   margin-bottom: 20px;
+  width: 100%;
 }

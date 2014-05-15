@@ -1,5 +1,13 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
 
+.armor-tapstrap .tabs,
+.armor-tapstrap-tabs {
+  @include clearfix();
+  display: block;
+  margin-right: -20px;
+  min-width: 20px;
+}
+
 .armor-tapstrap .tab,
 .armor-tapstrap-tab {
   @include transition(all .2s);
@@ -7,9 +15,11 @@
   color: #ccc;
   cursor: pointer;
   display: inline-block;
-  min-width: rhythm(5);
-  padding: rhythm(.5) rhythm(1);
+  float: left;
+  margin-right: 20px;
+  min-width: 90px;
   text-align: center;
+  text-decoration: none;
   &:hover,
   &.active,
   &.tab-active,
@@ -22,13 +32,13 @@
 .armor-tapstrap .tab-icon,
 .armor-tapstrap-tab-icon {
   display: block;
-  font-size: 20px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 30px;
 }
 
 .armor-tapstrap .tab-text,
 .armor-tapstrap-tab-text {
   display: block;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 30px;
 }
