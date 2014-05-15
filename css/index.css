@@ -501,7 +501,7 @@ html, body {
     background-color: #008bcc;
     color: #fff; }
 
-.armor-tapstrap .new-figure-icon, .armor-tapstrap .new-figure-icon, .armor-tapstrap .new-figure-text, .armor-tapstrap-new-figure-text {
+.armor-tapstrap .new-figure-icon, .armor-tapstrap-new-figure-icon, .armor-tapstrap .new-figure-text, .armor-tapstrap-new-figure-text {
   display: block;
   left: 0;
   position: absolute;
@@ -509,7 +509,7 @@ html, body {
   text-align: center;
   top: 50%; }
 
-.armor-tapstrap .new-figure-icon, .armor-tapstrap .new-figure-icon {
+.armor-tapstrap .new-figure-icon, .armor-tapstrap-new-figure-icon {
   font-size: 84px;
   line-height: 100px;
   margin-top: -50px; }
