@@ -12,8 +12,8 @@
   }
 
   @for $i from 2 through 5 {
-    $minWidth: ($i * 320px - 20px) / .96;
-    $maxWidth: $minWidth + (320px / .96);
+    $minWidth: ($i * 320px - 20px);
+    $maxWidth: $minWidth + (320px);
     @media (min-width: $minWidth) and (max-width: $maxWidth) {
       @include columns($i);
     }
