@@ -7,7 +7,7 @@
   margin-bottom: -20px;
   padding: 0;
 
-  @media (max-width: (620px / .96)) {
+  @media (max-width: 620px) {
     @include columns(1);
   }
 
