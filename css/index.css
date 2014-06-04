@@ -841,9 +841,7 @@ html, body {
 
 .armor-tapstrap .slider-item, .armor-tapstrap-slider-item {
   display: block;
-  overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px; }
+  overflow: hidden; }
 
 .armor-tapstrap .space-top-x-small, .armor-tapstrap-space-top-x-small {
   margin-top: 5px !important; }
