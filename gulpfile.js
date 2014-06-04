@@ -1,10 +1,11 @@
-var dataUri = require('gulp-data-uri')
+var bourbon = require('node-bourbon')
+  , dataUri = require('gulp-data-uri')
   , gulp = require('gulp')
   , sass = require('gulp-sass');
 
 gulp.task('sass', function () {
   gulp.src('scss/index.scss')
-    .pipe(sass())
+    .pipe(sass({includePaths: bourbon.includePaths}))
     .pipe(dataUri())
     .pipe(gulp.dest('css'));
 });

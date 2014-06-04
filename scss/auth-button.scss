@@ -1,4 +1,4 @@
-@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon';
+@import 'bourbon';
 
 @each $provider in (facebook #395692) (google #ca3f2f) (twitter #00a4e6) {
   .armor-tapstrap .auth-button-provider-#{nth($provider, 1)},

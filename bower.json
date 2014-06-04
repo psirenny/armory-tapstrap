@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "bourbon": "*",
     "font-awesome": "*"
   },
   "name": "armory-tapstrap",

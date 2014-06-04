@@ -10,7 +10,8 @@
   "dependencies": {
     "gulp": "*",
     "gulp-data-uri": "*",
-    "gulp-sass": "*"
+    "gulp-sass": "*",
+    "node-bourbon": "*"
   },
   "homepage": "https://github.com/psirenny/armory-tapstrap",
   "keywords": [
