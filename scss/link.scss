@@ -1,12 +1,10 @@
-@import 'bourbon';
-
 .armor-tapstrap .link,
 .armor-tapstrap-link {
-  @include transition(all .2s);
   color: #008bcc;
   cursor: pointer;
   display: inline;
   text-decoration: none;
+  transition: all .2s;
   &:hover {
     color: lighten(#008bcc, 20%);
   }

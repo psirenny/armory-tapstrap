@@ -1,5 +1,3 @@
-@import 'bourbon';
-
 .armor-tapstrap .thumbnail,
 .armor-tapstrap-thumbnail {
   border: none;
@@ -20,10 +18,10 @@
 .armor-tapstrap-thumbnail-clickable {
   cursor: pointer;
   &::after {
-    @include transition(all .2s);
     background-color: #000;
     opacity: 0;
     position: relative;
+    transition: all .2s;
   }
   &:hover::after {
     opacity: .3;

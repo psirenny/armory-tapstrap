@@ -1,8 +1,5 @@
-@import 'bourbon';
-
 .armor-tapstrap .new-figure,
 .armor-tapstrap-new-figure {
-  @include transition(all .2s);
   background-color: #404040;
   border: 20px solid #fff;
   color: #ccc;
@@ -12,6 +9,7 @@
   padding-top: 133%;
   position: relative;
   text-decoration: none;
+  transition: all .2s;
   width: 100%;
   &:hover {
     background-color: #008bcc;

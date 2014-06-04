@@ -1,5 +1,3 @@
-@import 'bourbon';
-
 .armor-tapstrap .overlay,
 .armor-tapstrap-overlay {
   position: relative;
@@ -11,7 +9,6 @@
 
 .armor-tapstrap .overlay-background,
 .armor-tapstrap-overlay-background {
-  @include transition(all .2s);
   background: rgba(#000, .8);
   bottom: 0;
   display: block;
@@ -20,6 +17,7 @@
   position: absolute;
   right: 0;
   top: 0;
+  transition: all .2s;
   &::before {
     content: '';
     display: inline-block;

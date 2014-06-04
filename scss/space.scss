@@ -1,5 +1,3 @@
-@import 'bourbon';
-
 @each $dir in top, right, bottom, left {
   @each $size in (x-small 5px) (small 10px) (medium 20px) (large 40px) (x-large 60px) {
     .armor-tapstrap .space-#{$dir}-#{nth($size, 1)},

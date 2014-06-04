@@ -1,5 +1,3 @@
-@import 'bourbon';
-
 .armor-tapstrap .userphoto,
 .armor-tapstrap-userphoto {
   display: inline-block;
@@ -22,12 +20,12 @@
     width: 100%;
   }
   &::after {
-    @include transition(all .2s);
     background-color: #000;
     display: inline-block;
     content: '\00a0';
     opacity: 0;
     position: relative;
+    transition: all .2s;
     width: 100%;
   }
 }

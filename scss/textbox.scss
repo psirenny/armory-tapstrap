@@ -1,8 +1,5 @@
-@import 'bourbon';
-
 .armor-tapstrap .textbox,
 .armor-tapstrap-textbox {
-  @include transition(all .2s);
   background-color: #dedede;
   border: none;
   color: #666;
@@ -12,8 +9,9 @@
   line-height: 20px;
   outline: none;
   padding: 10px;
+  transition: all .2s;
   width: 100%;
-  @include placeholder {
+  &::placeholder {
     color: #999
   }
   &:focus {

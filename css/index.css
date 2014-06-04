@@ -4,8 +4,6 @@ html, body {
   width: 100%; }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .armor-tapstrap .auth-button-provider-facebook, .armor-tapstrap-auth-button-provider-facebook {
@@ -24,9 +22,6 @@ html, body {
     background-color: #34c5ff; }
 
 .armor-tapstrap .auth-button, .armor-tapstrap-auth-button {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
   border: none;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4) inset;
   color: #fff;
@@ -37,7 +32,8 @@ html, body {
   padding: 10px 40px;
   overflow: hidden;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  transition: all 0.2s; }
   .armor-tapstrap .auth-button:disabled, .armor-tapstrap-auth-button:disabled {
     background-color: #b3b3b3;
     cursor: default; }
@@ -63,9 +59,6 @@ html, body {
   background-color: #000; }
 
 .armor-tapstrap .button, .armor-tapstrap-button {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
   background-color: #404040;
   border: none;
   color: #ccc;
@@ -82,6 +75,7 @@ html, body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.2s;
   vertical-align: middle; }
   .armor-tapstrap .button.active, .armor-tapstrap .button:hover, .armor-tapstrap-button.active, .armor-tapstrap-button:hover {
     background-color: #008bcc;
@@ -156,11 +150,6 @@ html, body {
   padding-right: 5px;
   position: relative; }
   .armor-tapstrap .comment-bubble::after, .armor-tapstrap-coment-bubble::after {
-    -webkit-transform: rotate(15deg);
-    -moz-transform: rotate(15deg);
-    -ms-transform: rotate(15deg);
-    -o-transform: rotate(15deg);
-    transform: rotate(15deg);
     border-right: 8px solid transparent;
     border-top: 8px solid #333;
     bottom: -5px;
@@ -169,6 +158,7 @@ html, body {
     height: 0;
     left: 3px;
     position: absolute;
+    transform: rotate(15deg);
     width: 0; }
 
 .armor-tapstrap .comment-bubble-inverted, .armor-tapstrap-coment-bubble-inverted {
@@ -215,9 +205,6 @@ html, body {
   display: block; }
 
 .armor-tapstrap .dropout-menu-item-target, .armor-tapstrap-dropout-menu-item-target {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
   color: #fff;
   cursor: pointer;
   display: block;
@@ -229,6 +216,7 @@ html, body {
   text-overflow: ellipsis;
   text-transform: none;
   padding: 5px 10px;
+  transition: all 0.2s;
   white-space: nowrap; }
   .armor-tapstrap .dropout-menu-item-target:hover, .armor-tapstrap-dropout-menu-item-target:hover {
     background-color: #3cbfff; }
@@ -347,13 +335,11 @@ html, body {
   white-space: nowrap; }
 
 .armor-tapstrap .link, .armor-tapstrap-link {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
   color: #008bcc;
   cursor: pointer;
   display: inline;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all 0.2s; }
   .armor-tapstrap .link:hover, .armor-tapstrap-link:hover {
     color: #33beff; }
 
@@ -382,54 +368,38 @@ html, body {
 .armor-tapstrap .logo-clickable, .armor-tapstrap-logo-clickable {
   cursor: pointer; }
   .armor-tapstrap .logo-clickable::after, .armor-tapstrap-logo-clickable::after {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
     background-color: rgba(0, 0, 0, 0);
     bottom: 0;
     content: '';
     left: 0;
     position: absolute;
     right: 0;
-    top: 0; }
+    top: 0;
+    transition: all 0.2s; }
   .armor-tapstrap .logo-clickable:hover::after, .armor-tapstrap-logo-clickable:hover::after {
     background-color: rgba(0, 0, 0, 0.3); }
 
 .masonry {
-  -webkit-column-gap: 20px;
-  -moz-column-gap: 20px;
   column-gap: 20px;
-  -webkit-columns: 6;
-  -moz-columns: 6;
-  columns: 6;
+  column-count: 6;
   display: block;
   margin-bottom: -20px;
   padding: 0; }
   @media (max-width: 620px) {
     .masonry {
-      -webkit-columns: 1;
-      -moz-columns: 1;
-      columns: 1; } }
+      column-count: 1; } }
   @media (min-width: 620px) and (max-width: 940px) {
     .masonry {
-      -webkit-columns: 2;
-      -moz-columns: 2;
-      columns: 2; } }
+      column-count: 2; } }
   @media (min-width: 940px) and (max-width: 1260px) {
     .masonry {
-      -webkit-columns: 3;
-      -moz-columns: 3;
-      columns: 3; } }
+      column-count: 3; } }
   @media (min-width: 1260px) and (max-width: 1580px) {
     .masonry {
-      -webkit-columns: 4;
-      -moz-columns: 4;
-      columns: 4; } }
+      column-count: 4; } }
   @media (min-width: 1580px) and (max-width: 1900px) {
     .masonry {
-      -webkit-columns: 5;
-      -moz-columns: 5;
-      columns: 5; } }
+      column-count: 5; } }
 
 .masonry-brick {
   display: inline-block;
@@ -478,9 +448,6 @@ html, body {
     vertical-align: top; }
 
 .armor-tapstrap .new-figure, .armor-tapstrap-new-figure {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
   background-color: #404040;
   border: 20px solid #fff;
   color: #ccc;
@@ -490,6 +457,7 @@ html, body {
   padding-top: 133%;
   position: relative;
   text-decoration: none;
+  transition: all 0.2s;
   width: 100%; }
   .armor-tapstrap .new-figure:hover, .armor-tapstrap-new-figure:hover {
     background-color: #008bcc;
@@ -514,15 +482,13 @@ html, body {
   margin-top: 50px; }
 
 .armor-tapstrap .off-canvas-column, .armor-tapstrap-off-canvas-column {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
   display: block;
   height: 100%;
   padding-left: 1%;
   padding-right: 1%;
   position: fixed;
   top: 0;
+  transition: all 0.2s;
   z-index: 10;
   width: 30%; }
 
@@ -541,9 +507,6 @@ html, body {
     opacity: 1; }
 
 .armor-tapstrap .overlay-background, .armor-tapstrap-overlay-background {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
   background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   display: block;
@@ -551,7 +514,8 @@ html, body {
   opacity: 0;
   position: absolute;
   right: 0;
-  top: 0; }
+  top: 0;
+  transition: all 0.2s; }
   .armor-tapstrap .overlay-background::before, .armor-tapstrap-overlay-background::before {
     content: '';
     display: inline-block;
@@ -628,184 +592,13 @@ html, body {
     background-repeat: no-repeat;
     background-size: 0.5rem 100%; }
   .armor-tapstrap .scrollable-window::-webkit-scrollbar-track, .armor-tapstrap-scrollable-window::-webkit-scrollbar-track {
-    background-image: -webkit-linear-gradient( #ccc, #ccc);
-    background-image: linear-gradient( #ccc, #ccc); }
+    background-image: linear-gradient #ccc, #ccc; }
     .armor-tapstrap .scrollable-window::-webkit-scrollbar-track:window-inactive, .armor-tapstrap-scrollable-window::-webkit-scrollbar-track:window-inactive {
-      background-image: -webkit-linear-gradient( #ffffff, #ffffff);
-      background-image: linear-gradient( #ffffff, #ffffff); }
+      background-image: linear-gradient white, white; }
   .armor-tapstrap .scrollable-window::-webkit-scrollbar-thumb, .armor-tapstrap-scrollable-window::-webkit-scrollbar-thumb {
-    background-image: -webkit-linear-gradient( #333, #333);
-    background-image: linear-gradient( #333, #333); }
+    background-image: linear-gradient #333, #333; }
     .armor-tapstrap .scrollable-window::-webkit-scrollbar-thumb:window-inactive, .armor-tapstrap-scrollable-window::-webkit-scrollbar-thumb:window-inactive {
-      background-image: -webkit-linear-gradient( #b3b3b3, #b3b3b3);
-      background-image: linear-gradient( #b3b3b3, #b3b3b3); }
-
-.armor-tapstrap .select2-container, .armor-tapstrap-select2-container {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
-  background-color: #575757;
-  cursor: text;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle; }
-
-.armor-tapstrap .select2-container:hover, .armor-tapstrap-select2-container:hover, .armor-tapstrap .select2-container-active, .armor-tapstrap-select2-container-active {
-  background-color: #404040; }
-
-.armor-tapstrap .select2-choice, .armor-tapstrap-select2-choice, .armor-tapstrap .select2-choices, .armor-tapstrap-select2-choices {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
-  display: block;
-  font-size: 16px;
-  line-height: 20px;
-  padding: rhythm(0.5);
-  width: 100%; }
-  .armor-tapstrap .select2-choice:after, .armor-tapstrap-select2-choice:after, .armor-tapstrap .select2-choices:after, .armor-tapstrap-select2-choices:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.armor-tapstrap .select2-container-active .select2-choice, .armor-tapstrap-select2-container-active-choice, .armor-tapstrap .select2-container-active .select2-choices, .armor-tapstrap-select2-container-active-choices {
-  border-color: #3fb8ff; }
-
-.armor-tapstrap .select2-search-choice, .armor-tapstrap-select2-search-choice, .armor-tapstrap .select2-search-field, .armor-tapstrap-select2-search-field {
-  color: #333;
-  display: block;
-  float: left;
-  font-family: Arial, sans-serif;
-  font-size: 1.2rem; }
-
-.armor-tapstrap .select2-search-choice, .armor-tapstrap-select2-search-choice {
-  background-color: #e6e6e6;
-  background-image: linear, bottom, rgba(255, 255, 255, 0.18) 0, rgba(255, 255, 255, 0) 100%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.2rem;
-  color: #fff;
-  display: inline-block;
-  line-height: 0;
-  margin-bottom: rhythm(0.25);
-  margin-top: rhythm(0.25);
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  position: relative; }
-
-.armor-tapstrap .select2-search-choice-focus, .armor-tapstrap-select2-search-choice-focus {
-  background-color: #ccc; }
-
-.select2-search-choice > div {
-  color: #333;
-  display: inline-block;
-  font-size: 1.2rem; }
-
-.armor-tapstrap .select2-search-choice-close, .armor-tapstrap-select2-search-choice-close {
-  display: none; }
-
-.armor-tapstrap .select2-search-field, .armor-tapstrap-select2-search-field {
-  white-space: nowrap; }
-
-.armor-tapstrap .select2-input, .armor-tapstrap-select2-input {
-  cursor: text;
-  display: block; }
-
-.armor-tapstrap .select2-drop, .armor-tapstrap-select2-drop {
-  display: block;
-  position: absolute;
-  top: 100%;
-  z-index: 9999;
-  width: 100%; }
-
-.armor-tapstrap .select2-drop .select2-search {
-  display: block;
-  margin-top: -40px; }
-
-.armor-tapstrap .select2-drop .select2-search input {
-  background-color: transparent;
-  border: none;
-  color: #ccc;
-  cursor: text;
-  display: block;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  padding: rhythm(0.5);
-  position: relative;
-  width: 100%; }
-
-.armor-tapstrap .select2-results, .armor-tapstrap-select2-results {
-  background-color: #404040;
-  display: block;
-  max-height: rhythm(15);
-  overflow: hidden;
-  position: relative; }
-
-.armor-tapstrap .select2-result, .armor-tapstrap-select2-result {
-  display: block; }
-
-.armor-tapstrap .select2-searching, .armor-tapstrap-select2-searching {
-  -webkit-animation: spin 2s infinite linear;
-  -moz-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-  color: #ccc;
-  display: inline-block;
-  font-family: FontAwesome;
-  padding: rhythm(0.5); }
-  .armor-tapstrap .select2-searching::before, .armor-tapstrap-select2-searching::before {
-    content: '\f110'; }
-
-.armor-tapstrap .select2-result-label, .armor-tapstrap-select2-result-label {
-  background-image: -webkit-linear-gradient(top, #575757, #575757);
-  background-image: linear-gradient(to bottom, #575757, #575757);
-  background-color: #404040;
-  background-repeat: no-repeat;
-  background-size: 0.25rem 100%;
-  cursor: pointer;
-  display: block;
-  padding: rhythm(0.5); }
-
-.armor-tapstrap .select2-highlighted .select2-result-label, .armor-tapstrap-select2-highlighted-result-label {
-  background-image: -webkit-linear-gradient(top, #0089cc, #0089cc);
-  background-image: linear-gradient(to bottom, #0089cc, #0089cc); }
-
-.armor-tapstrap .select2-disabled .select2-result-label, .armor-tapstrap-select2-disabled-result-label {
-  background-color: #fafafa;
-  color: #ccc;
-  cursor: default; }
-  .armor-tapstrap .select2-disabled .select2-result-label *, .armor-tapstrap-select2-disabled-result-label * {
-    cursor: default !important; }
-
-.armor-tapstrap .select2-default, .armor-tapstrap-select2-default {
-  display: block; }
-  .armor-tapstrap .select2-default > span, .armor-tapstrap-select2-default > span {
-    color: #ccc;
-    display: inline-block;
-    font-family: Arial, sans-serif; }
-
-.armor-tapstrap .select2-dropdown-open .select2-default > span, .armor-tapstrap .select2-dropdown-oepn .armor-tapstrap-select2-default > span {
-  color: transparent; }
-
-.armor-tapstrap .select2-display-none, .armor-tapstrap-select2-display-none {
-  display: none; }
-
-.armor-tapstrap .select2-addon, .armor-tapstrap-select2-addon {
-  background-color: #404040;
-  color: #ccc;
-  display: inline-block;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  height: 40px;
-  line-height: 40px;
-  min-width: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle; }
-
-.armor-tapstrap .select2-addon-icon, .armor-tapstrap-select2-addon-icon {
-  font-size: 16px;
-  line-height: inherit; }
+      background-image: linear-gradient #b3b3b3, #b3b3b3; }
 
 .armor-tapstrap .slide, .armor-tapstrap-slide {
   display: block;
@@ -1014,9 +807,6 @@ html, body {
     clear: both; }
 
 .armor-tapstrap .tab, .armor-tapstrap-tab {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
   background-color: #404040;
   color: #ccc;
   cursor: pointer;
@@ -1025,7 +815,8 @@ html, body {
   margin-right: 20px;
   min-width: 90px;
   text-align: center;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all 0.2s; }
   .armor-tapstrap .tab:hover, .armor-tapstrap .tab.active, .armor-tapstrap .tab.tab-active, .armor-tapstrap .tab.armor-tapstrap-tab-active, .armor-tapstrap-tab:hover, .armor-tapstrap-tab.active, .armor-tapstrap-tab.tab-active, .armor-tapstrap-tab.armor-tapstrap-tab-active {
     background-color: #008bcc;
     color: #fff; }
@@ -1078,9 +869,6 @@ html, body {
   line-height: 20px; }
 
 .armor-tapstrap .textbox, .armor-tapstrap-textbox {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
   background-color: #dedede;
   border: none;
   color: #666;
@@ -1090,14 +878,9 @@ html, body {
   line-height: 20px;
   outline: none;
   padding: 10px;
+  transition: all 0.2s;
   width: 100%; }
-  .armor-tapstrap .textbox::-webkit-input-placeholder, .armor-tapstrap-textbox::-webkit-input-placeholder {
-    color: #999; }
-  .armor-tapstrap .textbox::-moz-placeholder, .armor-tapstrap-textbox::-moz-placeholder {
-    color: #999; }
-  .armor-tapstrap .textbox:-moz-placeholder, .armor-tapstrap-textbox:-moz-placeholder {
-    color: #999; }
-  .armor-tapstrap .textbox:-ms-input-placeholder, .armor-tapstrap-textbox:-ms-input-placeholder {
+  .armor-tapstrap .textbox::placeholder, .armor-tapstrap-textbox::placeholder {
     color: #999; }
   .armor-tapstrap .textbox:focus, .armor-tapstrap-textbox:focus {
     background-color: #c5c5c5; }
@@ -1165,12 +948,10 @@ html, body {
 .armor-tapstrap .thumbnail-clickable, .armor-tapstrap-thumbnail-clickable {
   cursor: pointer; }
   .armor-tapstrap .thumbnail-clickable::after, .armor-tapstrap-thumbnail-clickable::after {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
     background-color: #000;
     opacity: 0;
-    position: relative; }
+    position: relative;
+    transition: all 0.2s; }
   .armor-tapstrap .thumbnail-clickable:hover::after, .armor-tapstrap-thumbnail-clickable:hover::after {
     opacity: 0.3; }
 
@@ -1210,14 +991,12 @@ html, body {
     top: 0;
     width: 100%; }
   .armor-tapstrap .userphoto::after, .armor-tapstrap-userphoto::after {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
     background-color: #000;
     display: inline-block;
     content: '\00a0';
     opacity: 0;
     position: relative;
+    transition: all 0.2s;
     width: 100%; }
 
 .armor-tapstrap .userphoto-clickable, .armor-tapstrap-userphoto-clickable {

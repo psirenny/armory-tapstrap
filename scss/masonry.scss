@@ -1,21 +1,19 @@
-@import 'bourbon';
-
 .masonry {
-  @include column-gap(20px);
-  @include columns(6);
+  column-gap: 20px;
+  column-count: 6;
   display: block;
   margin-bottom: -20px;
   padding: 0;
 
   @media (max-width: 620px) {
-    @include columns(1);
+    column-count: 1;
   }
 
   @for $i from 2 through 5 {
     $minWidth: ($i * 320px - 20px);
     $maxWidth: $minWidth + (320px);
     @media (min-width: $minWidth) and (max-width: $maxWidth) {
-      @include columns($i);
+      column-count: $i;
     }
   }
 }

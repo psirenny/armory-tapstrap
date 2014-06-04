@@ -1,5 +1,3 @@
-@import 'bourbon';
-
 .armor-tapstrap .dropout-context,
 .armor-tapstrap-dropout-context {
   position: relative;
@@ -44,7 +42,6 @@
 
 .armor-tapstrap .dropout-menu-item-target,
 .armor-tapstrap-dropout-menu-item-target {
-  @include transition(all .2s);
   color: #fff;
   cursor: pointer;
   display: block;
@@ -56,6 +53,7 @@
   text-overflow: ellipsis;
   text-transform: none;
   padding: 5px 10px;
+  transition: all .2s;
   white-space: nowrap;
   &:hover {
     background-color: #3cbfff;

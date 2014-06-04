@@ -1,14 +1,12 @@
-@import 'bourbon';
-
 .armor-tapstrap .off-canvas-column,
 .armor-tapstrap-off-canvas-column {
-  @include transition(all .2s);
   display: block;
   height: 100%;
   padding-left: 1%;
   padding-right: 1%;
   position: fixed;
   top: 0;
+  transition: all .2s;
   z-index: 10;
   width: 30%;
 }
