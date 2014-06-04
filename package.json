@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "gulp": "*",
-    "gulp-autoprefixer": "*",
     "gulp-data-uri": "*",
     "gulp-sass": "*",
     "node-bourbon": "*"
